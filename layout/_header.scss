@@ -1,0 +1,17 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    font-family: "Shrikhand", cursive;
+    padding: 1.6rem;
+    box-shadow: 0rem 0rem 0.6rem grey;
+    background-color: $colour-white;
+    $__logo{
+        color:$colour-black;
+        margin-top:0.2rem ;
+        margin-left:0.4rem ;
+        font-size: 3rem;
+    }
+}
