@@ -1,0 +1,55 @@
+.menus {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6F6F6;
+    border-radius: 1.18rem;
+    padding: 1rem 1rem 3rem;
+
+    & h2 {
+        width: 98%;
+    }
+}
+
+.menus-card {
+    display: flex;
+    flex-direction: column;
+    height:18rem;
+    width: 100%;
+    position: relative;
+    &__image {
+        height: 17rem;
+        border-radius: 1rem;
+        @include box-shadow;
+        & img {
+            height: 11rem;
+            width:100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+}
+
+.menus-card__head {
+    height: 2rem;
+    padding-left: 1rem;
+    margin-bottom: 0rem;
+}
+
+.menus-card__byline {
+    font-size: 1.12rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.tag {
+    height: 2rem;
+    width: 6rem;
+    position: absolute;
+    background-color: #99e2d0;
+    color: #008766;
+    justify-content: center;
+    align-items: center;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.2rem;
+}

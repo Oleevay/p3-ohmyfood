@@ -1,0 +1,20 @@
+.search-city {
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    &__icon {
+        display: flex;
+        gap:2.2rem;
+        align-items: center;
+        font-weight: 900;
+        color: #000;
+        &__address {
+            color: #000;
+
+    }
+}
+}
+
