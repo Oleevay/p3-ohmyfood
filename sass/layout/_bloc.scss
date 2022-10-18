@@ -1,6 +1,7 @@
-/* footer*/
 @import"../utils/_variable.scss";
+@import"../base/_base.scss";
 
+/* footer*/
 .bloc {
     display: flex;
     flex-direction: column;
@@ -9,7 +10,6 @@
 
     &__heading {
         font-weight: 500;
-        font-family: "Shrikhand", cursive;
         color: $colour-white;
         margin: 0;
         padding: 1rem 0rem;

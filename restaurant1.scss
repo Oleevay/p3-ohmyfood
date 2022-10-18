@@ -1,22 +1,21 @@
 @import"./sass/utils/variable.scss";
 @import"./sass/layout/_header.scss";
 @import"./sass/layout/_bloc.scss";
+@import"./sass/base/_base.scss";
 
-.header__logo {
-  display: flex;
-  justify-content: center;
-  position: relative;
-
-  &-i {
-    left: 10rem;
-    align-items: center;
-    position: absolute;
-  }
+body {
+  margin: 0;
 }
 
-.restaurant-background__image {
+.fa-arrow-left {
   display: flex;
-  margin: 0;
+  left: 1rem;
+  justify-content: center;
+  position: absolute;
+}
+
+.background__image {
+  display: flex;
   height: 22rem;
 
   & img {
@@ -34,9 +33,16 @@
   position: relative;
 }
 
-.menus-meal__entries{
+.menus__title {
+  display: flex;
+  font-size: 1.75rem;
+  justify-content: space-between;
+}
+
+.menus-meal__entries {
   display: flex;
   flex-direction: column;
+
   &__title {
     font-weight: 100;
     position: relative;
@@ -44,70 +50,62 @@
   }
 }
 
-.menus-meal__entries__varied{
+.menus-meal__entries__varied {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-
-.menus-meal__entries__choice{
+.menus-meal__entries__choice {
   height: 4.2rem;
   align-items: center;
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
-  &:hover {
-    cursor: pointer;
-    animation-delay: 0s;
-    animation: appearance 1.5s;
-    animation-fill-mode: both;
+}
+
+.menus-meal__entries__names {
+  flex-direction: column;
+  margin: 0;
+&__notch {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    /*height: 5rem;*/
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
+    }
   }
 }
-  .menus-meal__entries__names{
-     display: flex; 
-     flex-direction: column;
-     justify-content: space-between;
-     margin:0;
-    }
 
-h3,p {
+.menus-meal__entries__names__price {
+  justify-content: center;
+  margin-left: 33rem;
+  font-weight: 600;
+  height: 3rem;
+
+}
+
+h3,
+p {
   margin: 0;
   align-items: center;
-  padding:0.3rem;
-  } 
+  padding: 0.3rem;
+}
 
-  p{
-    padding: 0 0.3rem;
-  }
+p {
+  padding: 0 0.3rem;
+}
 
-  .menus-meal__entries__price {
-  justify-content: center;
-  margin-left:33rem;
-    font-weight: 600; 
-    height:3rem;
-    &__notch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*height:100%;*/
-    width:4rem;
-   /* right:-33rem;*/
-    margin: 0;
-    /*overflow: hidden;*/
-  background:$colour-tertiaire;
-  &fa-circle-check{
-   color:$colour-white ;
-   font-size:2rem ;
-  }
-  }
-  }
-
-
-.menus-meal__dish{
+.menus-meal__dish {
   display: flex;
   flex-direction: column;
+
   &__title {
     font-weight: 100;
     position: relative;
@@ -115,111 +113,95 @@ h3,p {
   }
 }
 
-.menus-meal__dish__varied{
+.menus-meal__dish__varied {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.menus-meal__dish__choice{
+.menus-meal__dish__choice {
   height: 4.2rem;
   align-items: center;
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
-  &:hover {
-    cursor: pointer;
-    animation-delay: 0s;
-    animation: appearance 1.5s;
-    animation-fill-mode: both;
+}
+
+.menus-meal__dish__names {
+  flex-direction: column;
+  margin: 0;
+
+  &__notch {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    /*height: 5rem;*/
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
+    }
   }
 }
-  .menus-meal__dish__names{
-     display: flex; 
-     flex-direction: column;
-     justify-content: space-between;
-     margin:0;
-    }
 
-  .menus-meal__dish__price {
+.menus-meal__dish__names__price {
   justify-content: center;
-  margin-left:33rem;
-    font-weight: 600; 
-    height:3rem;
-    &__notch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*height:100%;*/
-    width:4rem;
-   /* right:-33rem;*/
-    margin: 0;
-    /*overflow: hidden;*/
-  background:$colour-tertiaire;
-  &fa-circle-check{
-   color:$colour-white ;
-   font-size:2rem ;
-  }
-  }
-  }
+  margin-left: 33rem;
+  font-weight: 600;
+  height: 3rem;
+}
 
-  .menus-meal__desserts{
-    display: flex;
-    flex-direction: column;
-    &__title {
-      font-weight: 100;
-      position: relative;
-      text-transform: uppercase;
-    }
-  }
-  
-  .menus-meal__desserts__varied{
-    display: flex;
-    flex-direction: column;
+.menus-meal__desserts {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 100;
     position: relative;
+    text-transform: uppercase;
   }
-  
-  
-  .menus-meal__desserts__choice{
-    height: 4.2rem;
-    align-items: center;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
-    &:hover {
-      cursor: pointer;
-      animation-delay: 0s;
-      animation: appearance 1.5s;
-      animation-fill-mode: both;
-    }
-  }
-    .menus-meal__desserts__names{
-       display: flex; 
-       flex-direction: column;
-       justify-content: space-between;
-       margin:0;
-      }
-  
-    .menus-meal__desserts__price {
+}
+
+.menus-meal__desserts__varied {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menus-meal__desserts__choice {
+  height: 4.2rem;
+  align-items: center;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+}
+
+.menus-meal__desserts__names {
+  flex-direction: column;
+  margin: 0;
+
+  &__notch {
+    display: flex;
     justify-content: center;
-    margin-left:33rem;
-      font-weight: 600; 
-      height:3rem;
-      &__notch{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /*height:100%;*/
-      width:4rem;
-     /* right:-33rem;*/
-      margin: 0;
-      /*overflow: hidden;*/
-    background:$colour-tertiaire;
-    &fa-circle-check{
-     color:$colour-white ;
-     font-size:2rem ;
+    width: 5rem;
+    /*height: 5rem;*/
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
     }
-    }
-    }
+  }
+}
+
+.menus-meal__desserts__names__price {
+  justify-content: center;
+  margin-left: 33rem;
+  font-weight: 600;
+  height: 3rem;
+}

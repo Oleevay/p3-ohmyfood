@@ -1,3 +1,6 @@
+@import"../base/_base.scss";
+@import"../utils/_variable.scss";
+
 .functioning {
     display: flex;
     flex-direction: column;
@@ -25,18 +28,18 @@ ol {
         display: flex;
         height: 1.8rem;
         width: 1.8rem;
-        color: white;
+        color: $colour-white;
         align-items: center;
         justify-content: center;
         position: absolute;
         left: 1.2rem;
-        background-color: #9356DC;
+        background:$colour-primary;
         border-radius: 30px;
     }
 }
 
 li {
-    background-color: #f3f3f3;
+    background-color:$colour-grey;
     align-items: center;
     padding: 1.3rem;
     border-radius: 1.2rem;
@@ -54,6 +57,6 @@ li:hover {
     background-color: #F5EDFF;
 
     & i {
-        color: #9356DC;
+        color: $colour-primary;
     }
 }

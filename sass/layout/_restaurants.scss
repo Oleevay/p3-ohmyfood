@@ -1,10 +1,11 @@
-.restaurants {
+@import"../utils/_variable.scss";
+
+.restaurants-cards {
     display: flex;
     flex-direction: column;
     background: $colour-light-grey;
     border-radius: 1.18rem;
     padding: 1rem 1rem 3rem;
-
     & h2 {
         width: 98%;
     }
@@ -17,7 +18,6 @@
     width: 100%;
     position: relative;
     margin: 0;
-
     &__tag {
         position: absolute;
         background-color: $colour-very-lightgreen ;
@@ -33,7 +33,6 @@
         height: 16.8rem;
         border-radius: 1rem;
         @include box-shadow;
-
         & img {
             height: 11rem;
             width: 100%;
@@ -64,5 +63,9 @@
     font-size:1.5rem;
     position: absolute;
     align-items: center;
-    justify-content: center;
+    &:hover{
+        /*background-image: linear-gradient(#FF79DA, #9356DC);*/
+        font-weight: 900;
+        color: black;
+    }
 }
