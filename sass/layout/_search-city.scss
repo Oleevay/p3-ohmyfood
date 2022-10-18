@@ -1,18 +1,20 @@
+@import"../utils/_variable.scss";
+
 .search-city {
     display: flex;
     height: 4rem;
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #EAEAEA;
+    background:$colour-verylight-grey;
     &__icon {
         display: flex;
         gap:2.2rem;
         align-items: center;
         font-weight: 900;
-        color: #000;
+        color: $colour-black;
         &__address {
-            color: #000;
+            color: $colour-black;
 
     }
 }

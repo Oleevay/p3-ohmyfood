@@ -1,4 +1,4 @@
-_<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -8,7 +8,7 @@ _<!DOCTYPE html>
     <script src="https://kit.fontawesome.com/945c1ae7f3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="/mobile.css">
     <link rel="stylesheet" href="desktop.css">
     <link rel="stylesheet" href="tablette.css">
     <title>ohmyfood</title>
@@ -23,10 +23,11 @@ _<!DOCTYPE html>
     </header>
 
     <main>
-        <div class="search-city">
-            <div class="search-city__icon"><i class="fa-solid fa-location-dot"></i><p class="search-city__address">Paris, Belleville</p>
+        <section class="search-city">
+            <div class="search-city__icon"><i class="fa-solid fa-location-dot"></i>
+                <p class="search-city__address">Paris, Belleville</p>
             </div>
-        </div>
+        </section>
 
         <section class="exploration">
             <h1 class="exploration__heading">Réservez le menu qui vous convient</h1>
@@ -45,51 +46,58 @@ _<!DOCTYPE html>
             </ol>
         </section>
 
-        <div class="menus">
+        <div class="restaurants">
             <h2>Restaurants</h2>
-            <a href="#" class="menus-card"><span class="tag">Nouveau</span>
-                <article class="menus-card__image">
+            <a class="restaurants-card" href="./sass/pages/restaurant1.html"><span class="restaurants-card__tag">Nouveau</span>
+                <article class="restaurants-card__image">
                     <img src="images/restaurants/la-palette-du-gout.jpg" alt="la-palette-gout">
-                    <h3 class="menus-card__head">La palette du goût<i class="fa-regular fa-heart"></i></h3>
-                    <p class="menus-card__byline">Ménilmontant</p>
+                    <div class="restaurants-card__information">
+                    <h3>La palette du goût</h3>
+                    <span class="restaurants-card__information-icon"><i class="fa-regular fa-heart"></i></span>
+                    <p>Ménilmontant</p>
+                    </div>
                 </article>
             </a>
 
-            <a href="#" class="menus-card"><span class="tag">Nouveau</span>
-                <article class="menus-card__image">
+            <a class="restaurants-card" href="./sass/pages/la note enchantée.html" ><span class="restaurants-card__tag">Nouveau</span>
+                <article class="restaurants-card__image">
                     <img src="images/restaurants/la-note-enchantee.jpg" alt="la-note-enchantee">
-                    <h3 class="menus-card__head">La note enchantée<i class="fa-regular fa-heart"></i></h3>
-                    <p class="menus-card__byline">Charonne</p>
+                    <div class="restaurants-card__information">
+                    <h3>La note enchantée</h3><span class="restaurants-card__information-icon"><i class="fa-regular fa-heart"></i></span>
+                    <p>Charonne</p>
+                </div>
                 </article>
             </a>
 
-            <a href="#" class="menus-card">
-                <article class="menus-card__image">
+            <a class="restaurants-card" href="./sass/pages/A la française.html" >
+                <article class="restaurants-card__image">
                     <img src="images/restaurants/a-la-française.jpg" alt="a-la-française">
-                    <h3 class="menus-card__head">A la française<i class="fa-regular fa-heart"></i></h3>
-                    <p class="menus-card__byline">Cité Rouge</p>
+                    <div class="restaurants-card__information">
+                    <h3>A la française</h3>
+                    <span class="restaurants-card__information-icon"><i class="fa-regular fa-heart"></i></span>
+                    <p>Cité Rouge</p>
+                </div>
                 </article>
             </a>
 
-            <a href="#" class="menus-card">
-                <article class="menus-card__image">
+            <a class="restaurants-card" href="./sass/pages/Le délice des sens.html" >
+                <article class="restaurants-card__image">
                     <img src="images/restaurants/le-delice-des-sens.jpg" alt="folie-mericourt">
-                    <h3 class="menus-card__head">Le delice des sens<i class="fa-regular fa-heart"></i></h3>
-                    <p class="menus-card__byline"> Folie-Méricourt</p>
+                    <div class="restaurants-card__information">
+                    <h3>Le délice des sens</h3>
+                    <span class="restaurants-card__information-icon"><i class="fa-regular fa-heart"></i></span>
+                    <p>Folie-Méricourt</p>
+                </div>
                 </article>
             </a>
         </div>
     </main>
-    <footer>
-        <div class="bloc">
-            <h3 class="bloc__heading">ohmyfood</h3>
-            <div class="bloc__set">
-                <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-                <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-                <a href="#">Mentions légales</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
+    <footer class="bloc">
+            <h2 class="bloc__heading">ohmyfood</h2>
+               <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+                <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+                <p>Mentions légales</p>
+                <a class="bloc__link" href="mailto:bidule@gmail.com">Contact</a>
     </footer>
 </body>
 

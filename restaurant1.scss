@@ -1,0 +1,225 @@
+@import"./sass/utils/variable.scss";
+@import"./sass/layout/_header.scss";
+@import"./sass/layout/_bloc.scss";
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &-i {
+    left: 10rem;
+    align-items: center;
+    position: absolute;
+  }
+}
+
+.restaurant-background__image {
+  display: flex;
+  margin: 0;
+  height: 22rem;
+
+  & img {
+    flex-direction: row;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.menus {
+  padding: 1.5rem 0.5rem;
+  border-radius: 3rem 3rem 0 0;
+  background: $colour-light-grey;
+  margin-top: -2rem;
+  position: relative;
+}
+
+.menus-meal__entries{
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-weight: 100;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.menus-meal__entries__varied{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.menus-meal__entries__choice{
+  height: 4.2rem;
+  align-items: center;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+  &:hover {
+    cursor: pointer;
+    animation-delay: 0s;
+    animation: appearance 1.5s;
+    animation-fill-mode: both;
+  }
+}
+  .menus-meal__entries__names{
+     display: flex; 
+     flex-direction: column;
+     justify-content: space-between;
+     margin:0;
+    }
+
+h3,p {
+  margin: 0;
+  align-items: center;
+  padding:0.3rem;
+  } 
+
+  p{
+    padding: 0 0.3rem;
+  }
+
+  .menus-meal__entries__price {
+  justify-content: center;
+  margin-left:33rem;
+    font-weight: 600; 
+    height:3rem;
+    &__notch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height:100%;*/
+    width:4rem;
+   /* right:-33rem;*/
+    margin: 0;
+    /*overflow: hidden;*/
+  background:$colour-tertiaire;
+  &fa-circle-check{
+   color:$colour-white ;
+   font-size:2rem ;
+  }
+  }
+  }
+
+
+.menus-meal__dish{
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-weight: 100;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.menus-meal__dish__varied{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menus-meal__dish__choice{
+  height: 4.2rem;
+  align-items: center;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+  &:hover {
+    cursor: pointer;
+    animation-delay: 0s;
+    animation: appearance 1.5s;
+    animation-fill-mode: both;
+  }
+}
+  .menus-meal__dish__names{
+     display: flex; 
+     flex-direction: column;
+     justify-content: space-between;
+     margin:0;
+    }
+
+  .menus-meal__dish__price {
+  justify-content: center;
+  margin-left:33rem;
+    font-weight: 600; 
+    height:3rem;
+    &__notch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height:100%;*/
+    width:4rem;
+   /* right:-33rem;*/
+    margin: 0;
+    /*overflow: hidden;*/
+  background:$colour-tertiaire;
+  &fa-circle-check{
+   color:$colour-white ;
+   font-size:2rem ;
+  }
+  }
+  }
+
+  .menus-meal__desserts{
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-weight: 100;
+      position: relative;
+      text-transform: uppercase;
+    }
+  }
+  
+  .menus-meal__desserts__varied{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  
+  .menus-meal__desserts__choice{
+    height: 4.2rem;
+    align-items: center;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+    &:hover {
+      cursor: pointer;
+      animation-delay: 0s;
+      animation: appearance 1.5s;
+      animation-fill-mode: both;
+    }
+  }
+    .menus-meal__desserts__names{
+       display: flex; 
+       flex-direction: column;
+       justify-content: space-between;
+       margin:0;
+      }
+  
+    .menus-meal__desserts__price {
+    justify-content: center;
+    margin-left:33rem;
+      font-weight: 600; 
+      height:3rem;
+      &__notch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*height:100%;*/
+      width:4rem;
+     /* right:-33rem;*/
+      margin: 0;
+      /*overflow: hidden;*/
+    background:$colour-tertiaire;
+    &fa-circle-check{
+     color:$colour-white ;
+     font-size:2rem ;
+    }
+    }
+    }

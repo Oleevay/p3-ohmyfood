@@ -1,10 +1,11 @@
-@import"../utils/box-shaow.scss";
+@import"../utils/_box-shaow.scss";
+@import"../utils/_variable.scss";
 
 .exploration{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f6F6F6;
+    background: $colour-light-grey;
     padding-bottom: 3.3rem;
     width:100%;
 
@@ -14,16 +15,16 @@
 }
 &__text {
     padding-bottom: 2rem;
-    color: #353535;
+    color:$colour-dark-grey;
     margin: 0rem;
 }
 &__btn {
     height: 4rem;
-    color: white;
+    color:$colour-white;
     font-weight: 500;
     font-size: 1.2rem;
-    background-image: linear-gradient(#FF79DA,
-            #9356DC);
+    background-image: linear-gradient($colour-secondary,
+    $colour-primary);
     padding: 0rem 2rem;
     border: none;
     border-radius: 2rem;
@@ -33,7 +34,7 @@
 }
 &__btn:hover {
     transform: scale(1.1);
-    color: #0065fc;
+    color:$colour-blue;
     opacity: 0.8;
 }
 }

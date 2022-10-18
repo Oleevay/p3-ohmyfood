@@ -1,0 +1,68 @@
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background: $colour-light-grey;
+    border-radius: 1.18rem;
+    padding: 1rem 1rem 3rem;
+
+    & h2 {
+        width: 98%;
+    }
+}
+
+.restaurants-card {
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    width: 100%;
+    position: relative;
+    margin: 0;
+
+    &__tag {
+        position: absolute;
+        background-color: $colour-very-lightgreen ;
+        color: $colour-green;
+        right: 1rem;
+        top: 0.5rem;
+        font-weight: 500;
+        border-radius: 0.2rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    &__image {
+        height: 16.8rem;
+        border-radius: 1rem;
+        @include box-shadow;
+
+        & img {
+            height: 11rem;
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+            border-radius: 1rem 1rem 0 0;
+        }
+    }
+
+    &__information h3,
+    p {
+        margin: 0rem;
+        position: relative;
+        padding-left: 1rem;
+    }
+    h3 {
+        margin-bottom: 0.2rem;
+        padding: 1rem 1rem 0rem;
+    }
+}
+
+.restaurants-card__information-icon {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    right: 1.5rem;
+    top: 12.3rem;
+    font-size:1.5rem;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
