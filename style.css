@@ -2,7 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;500;700 & family= Shrikhand & display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
+.header {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  position: relative;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+.header__logo img {
+  display: flex;
+  height: 2.1rem;
+  font-family: "Shrikhand", cursive;
+}
 
 :root {
   margin: 0;
@@ -50,27 +63,89 @@ main {
   margin: auto;
 }
 
-.header {
+/* footer*/
+.bloc {
   display: flex;
-  align-items: center;
-  height: 2rem;
-  position: relative;
-  justify-content: center;
-  padding: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  background: #353535;
+  padding: 1rem 1.3rem;
 }
-.header__logo img {
-  display: flex;
-  height: 2.1rem;
+.bloc__heading {
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  padding: 1rem 0rem;
+}
+.bloc p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  padding: 0.3rem;
+}
+.bloc p i {
+  color: #fff;
+  padding-right: 1rem;
+}
+
+.bloc__link {
+  color: #fff;
+}
+
+:root {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  width: auto;
+}
+
+h1 {
   font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #000000;
+  /*color:$colour-white;*/
+}
+
+main {
+  width: auto;
+  margin: auto;
+}
+
+body {
+  margin: 0;
 }
 
 .fa-arrow-left {
   display: flex;
-  left: 1.4rem;
+  left: 1rem;
   justify-content: center;
-  align-items: center;
-  bottom: 1.7rem;
   position: absolute;
 }
 
@@ -256,35 +331,8 @@ p {
   height: 3rem;
 }
 
-/* footer*/
-.bloc {
-  display: flex;
-  flex-direction: column;
-  background: #353535;
-  padding: 1rem 1.3rem;
-}
-.bloc__heading {
-  font-weight: 500;
-  color: #fff;
-  margin: 0;
-  padding: 1rem 0rem;
-}
-.bloc p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  margin: 0;
-  padding: 0.3rem;
-}
-.bloc p i {
-  color: #fff;
-  padding-right: 1rem;
-}
-
- a{
+.bloc__link {
   color: #fff;
 }
-
-
 
 /*# sourceMappingURL=style.css.map */
