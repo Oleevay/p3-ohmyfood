@@ -1,6 +1,7 @@
 @import"../utils/_box-shaow.scss";
 @import"../utils/_variable.scss";
 @import"../base/_base.scss";
+@import"../components/_button.scss";
 
 .exploration{
     display: flex;
@@ -19,23 +20,5 @@
     color:$colour-dark-grey;
     margin: 0rem;
 }
-&__btn {
-    height: 4rem;
-    color:$colour-white;
-    font-weight: 500;
-    font-size: 1.2rem;
-    background-image: linear-gradient($colour-secondary,
-    $colour-primary);
-    padding: 0rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    @include box-shadow;
-    cursor: pointer;
-    transition: all 1.1s;
 }
-&__btn:hover {
-    transform: scale(1.1);
-    color:$colour-blue;
-    opacity: 0.8;
-}
-}
+

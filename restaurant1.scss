@@ -2,6 +2,7 @@
 @import"./sass/layout/_header.scss";
 @import"./sass/layout/_bloc.scss";
 @import"./sass/base/_base.scss";
+@import"./sass/components/_button.scss";
 
 body {
   margin: 0;
@@ -26,11 +27,19 @@ body {
 }
 
 .menus {
-  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.3rem 3rem;
   border-radius: 3rem 3rem 0 0;
   background: $colour-light-grey;
   margin-top: -2rem;
   position: relative;
+  &__btn{
+    justify-content: center;
+    align-items: center;
+    margin: 0 20rem;
+    margin-top: 2rem;
+  }
 }
 
 .menus__title {
@@ -40,9 +49,7 @@ body {
 }
 
 .menus-meal__entries {
-  display: flex;
   flex-direction: column;
-
   &__title {
     font-weight: 100;
     position: relative;
@@ -51,7 +58,6 @@ body {
 }
 
 .menus-meal__entries__varied {
-  display: flex;
   flex-direction: column;
   position: relative;
 }
@@ -72,7 +78,6 @@ body {
     display: flex;
     justify-content: center;
     width: 5rem;
-    /*height: 5rem;*/
     margin-right: -5rem;
     background: $colour-tertiaire;
 
@@ -81,14 +86,6 @@ body {
       font-size: 2rem;
     }
   }
-}
-
-.menus-meal__entries__names__price {
-  justify-content: center;
-  margin-left: 33rem;
-  font-weight: 600;
-  height: 3rem;
-
 }
 
 h3,
@@ -101,6 +98,14 @@ p {
 p {
   padding: 0 0.3rem;
 }
+
+.menus-meal__entries__names__price {
+  right: 3rem;
+  font-weight: 600;
+  height: 3rem;
+  position: absolute;
+}
+
 
 .menus-meal__dish {
   display: flex;
@@ -136,7 +141,6 @@ p {
     display: flex;
     justify-content: center;
     width: 5rem;
-    /*height: 5rem;*/
     margin-right: -5rem;
     background: $colour-tertiaire;
 
@@ -148,10 +152,10 @@ p {
 }
 
 .menus-meal__dish__names__price {
-  justify-content: center;
-  margin-left: 33rem;
+  right: 3rem;
   font-weight: 600;
   height: 3rem;
+  position: absolute;
 }
 
 .menus-meal__desserts {
@@ -188,7 +192,6 @@ p {
     display: flex;
     justify-content: center;
     width: 5rem;
-    /*height: 5rem;*/
     margin-right: -5rem;
     background: $colour-tertiaire;
 
@@ -200,12 +203,13 @@ p {
 }
 
 .menus-meal__desserts__names__price {
-  justify-content: center;
-  margin-left: 33rem;
+  right: 3rem;
   font-weight: 600;
   height: 3rem;
+  position: absolute;
 }
 
 .bloc__link{
   color:$colour-white;
 }
+
