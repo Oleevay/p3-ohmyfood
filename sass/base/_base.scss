@@ -27,24 +27,26 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 p, li{
-    font-size:1.2rem ;
+    font-size:1.3rem ;
     font-weight: 500;
 }
 
 p{
-    font-size:1.2rem ;
-    font-weight: 300;   
+    font-size:1.3rem ;
+    font-weight: 500;   
 }
 a,
 a:visited {
     text-decoration: none;
     color:$colour-black;
-    /*color:$colour-white;*/
+    padding: 0;
+    cursor: pointer;
+    
 }
 
 main {

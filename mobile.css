@@ -33,25 +33,26 @@ h2 {
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p, li {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-p, li {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000000;
-  /*color:$colour-white;*/
+  padding: 0;
+  cursor: pointer;
 }
 
 main {
@@ -99,25 +100,26 @@ h2 {
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p, li {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-p, li {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000000;
-  /*color:$colour-white;*/
+  padding: 0;
+  cursor: pointer;
 }
 
 main {
@@ -169,25 +171,26 @@ h2 {
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p, li {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-p, li {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000000;
-  /*color:$colour-white;*/
+  padding: 0;
+  cursor: pointer;
 }
 
 main {
@@ -256,25 +259,26 @@ h2 {
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p, li {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-p, li {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000000;
-  /*color:$colour-white;*/
+  padding: 0;
+  cursor: pointer;
 }
 
 main {
@@ -340,98 +344,84 @@ li:hover i {
 }
 
 .restaurants-cards {
-  display: flex;
   flex-direction: column;
-  width: 98%;
   background: #f6f6f6;
   border-radius: 1.18rem;
-  padding: 1rem 1rem 3rem;
-  gap: 0.5rem;
+  padding: 1rem 1.6rem 3rem;
 }
 .restaurants-cards h2 {
-  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
-
-.restaurants-card {
-  display: flex;
-  flex-direction: column;
-  height: 18rem;
-  width: 100%;
-  position: relative;
-  margin: 0;
-}
-.restaurants-card__tag {
+.restaurants-cards__tag {
   position: absolute;
   background-color: #99e2d0;
   color: #008766;
-  right: 1rem;
-  top: 0.5rem;
+  right: 1.9rem;
+  top: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
   border-radius: 0.2rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
 }
-.restaurants-card__image {
-  height: 16.8rem;
+.restaurants-cards__image {
+  height: 19.8rem;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
-.restaurants-card__image img {
-  height: 11rem;
+.restaurants-cards__image img {
+  height: 14.5rem;
   width: 100%;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
-.restaurants-card__information h3,
-.restaurants-card p {
-  margin: 0rem;
+.restaurants-cards .restaurants-cards__set {
+  width: 50%;
+  padding: 0.8rem;
   position: relative;
-  padding-left: 1rem;
 }
-.restaurants-card h3 {
-  margin-bottom: 0.2rem;
+.restaurants-cards__information h3,
+.restaurants-cards p {
+  margin: 0rem;
   padding: 1rem 1rem 0rem;
 }
-.restaurants-card p {
+.restaurants-cards h3 {
+  margin-bottom: 0.2rem;
+}
+.restaurants-cards p {
   font-weight: 300;
+  padding-top: 0;
 }
 
-.restaurants-card__information-icon {
+.restaurants-cards__set__information-icon {
   display: flex;
   width: 2rem;
   height: 2rem;
-  right: 1.5rem;
-  top: 12.3rem;
-  font-size: 1.5rem;
+  right: 3.5rem;
+  top: 16.6rem;
+  font-size: 2rem;
   position: absolute;
   align-items: center;
+  /*opacity: 0.2;*/
+  background-image: #fff;
 }
-.restaurants-card__information-icon:hover {
-  /*background-image: linear-gradient(#FF79DA, #9356DC);*/
-  font-weight: 900;
-  color: black;
+.restaurants-cards__set__information-icon:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 /* version tablette*/
 @media screen and (min-width: 992px) {
   .restaurants-cards {
     flex-direction: row;
-    height: auto;
-    width: 100%;
     flex-wrap: wrap;
-    gap: 2rem;
   }
   .restaurants-cards h2 {
-    justify-content: space-between;
-    margin: 0;
+    width: 100%;
   }
-  .restaurants-card {
+  .restaurants-cards__image {
     flex-direction: row;
-    height: auto;
+    flex-wrap: wrap;
     width: 40%;
-  }
-  .restaurants-card__image {
-    height: 20rem;
-    width: 28rem;
+    margin: 0;
   }
 }
 :root {
@@ -459,25 +449,26 @@ h2 {
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p, li {
   font-size: 1.3rem;
   font-weight: 500;
 }
 
-p, li {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000000;
-  /*color:$colour-white;*/
+  padding: 0;
+  cursor: pointer;
 }
 
 main {
