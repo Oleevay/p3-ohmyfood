@@ -48,11 +48,15 @@ p {
 }
 
 a,
-a:visited {
+a :visited {
   text-decoration: none;
   color: #000000;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }
 
 main {
@@ -70,7 +74,6 @@ main {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 .header__logo img {
-  display: flex;
   height: 2.1rem;
   font-family: "Shrikhand", cursive;
 }
@@ -115,11 +118,15 @@ p {
 }
 
 a,
-a:visited {
+a :visited {
   text-decoration: none;
   color: #000000;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }
 
 main {
@@ -186,11 +193,15 @@ p {
 }
 
 a,
-a:visited {
+a :visited {
   text-decoration: none;
   color: #000000;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }
 
 main {
@@ -274,11 +285,15 @@ p {
 }
 
 a,
-a:visited {
+a :visited {
   text-decoration: none;
   color: #000000;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }
 
 main {
@@ -343,7 +358,21 @@ li:hover i {
   color: #9356DC;
 }
 
+/*desktop*/
+@media screen and (min-width: 992px) {
+  .functioning {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  ol {
+    flex-direction: row;
+  }
+  li:hover {
+    /*transform: scale(0.9);*/
+  }
+}
 .restaurants-cards {
+  display: flex;
   flex-direction: column;
   background: #f6f6f6;
   border-radius: 1.18rem;
@@ -351,8 +380,17 @@ li:hover i {
 }
 .restaurants-cards h2 {
   margin-top: 3rem;
+  width: 100%;
 }
-.restaurants-cards__tag {
+
+.restaurants-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.8rem;
+  position: relative;
+}
+.restaurants-link__tag {
   position: absolute;
   background-color: #99e2d0;
   color: #008766;
@@ -363,65 +401,58 @@ li:hover i {
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
 }
-.restaurants-cards__image {
+.restaurants-link__image {
   height: 19.8rem;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
-.restaurants-cards__image img {
+.restaurants-link__image img {
   height: 14.5rem;
   width: 100%;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
-.restaurants-cards .restaurants-cards__set {
-  width: 50%;
-  padding: 0.8rem;
+.restaurants-link .restaurants-description {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
-.restaurants-cards__information h3,
-.restaurants-cards p {
+.restaurants-link .restaurants-description h3,
+.restaurants-link .restaurants-description p {
   margin: 0rem;
   padding: 1rem 1rem 0rem;
 }
-.restaurants-cards h3 {
+.restaurants-link .restaurants-description h3 {
   margin-bottom: 0.2rem;
 }
-.restaurants-cards p {
+.restaurants-link .restaurants-description p {
   font-weight: 300;
   padding-top: 0;
 }
-
-.restaurants-cards__set__information-icon {
-  display: flex;
-  width: 2rem;
+.restaurants-link .restaurants-description__icon {
   height: 2rem;
   right: 3.5rem;
-  top: 16.6rem;
+  top: 1rem;
   font-size: 2rem;
   position: absolute;
-  align-items: center;
-  /*opacity: 0.2;*/
-  background-image: #fff;
+  color: #fff;
+  /*background-color: $colour-white;*/
+  border-radius: 30% 30% 40% 40%;
 }
-.restaurants-cards__set__information-icon:hover {
-  background-image: linear-gradient(#FF79DA, #9356DC);
+.restaurants-link .restaurants-description__icon:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
-/* version tablette*/
+/*desktop*/
 @media screen and (min-width: 992px) {
   .restaurants-cards {
-    flex-direction: row;
+    height: auto;
     flex-wrap: wrap;
-  }
-  .restaurants-cards h2 {
-    width: 100%;
-  }
-  .restaurants-cards__image {
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 40%;
-    margin: 0;
+    justify-content: space-between;
+  }
+  .restaurants-link {
+    width: 47%;
   }
 }
 :root {
@@ -464,11 +495,15 @@ p {
 }
 
 a,
-a:visited {
+a :visited {
   text-decoration: none;
   color: #000000;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
 }
 
 main {
@@ -504,7 +539,5 @@ main {
 .bloc__link {
   color: #fff;
 }
-
-/* la version tablette*/
 
 /*# sourceMappingURL=mobile.css.map */

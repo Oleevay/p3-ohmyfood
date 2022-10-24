@@ -60,3 +60,20 @@ li:hover {
         color: $colour-primary;
     }
 }
+ /*desktop*/
+ @media screen and (min-width:992px) {
+   
+    .functioning{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    ol{
+        flex-direction: row;
+        
+    }
+    li:hover {
+        /*transform: scale(0.9);*/
+    }
+ }
+

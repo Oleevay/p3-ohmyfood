@@ -2,7 +2,9 @@
 @import"./sass/layout/_header.scss";
 @import"./sass/layout/_bloc.scss";
 @import"./sass/base/_base.scss";
-@import"./sass/components/_button.scss";
+/*@import"./sass/components/_button.scss";*/
+@import"./sass/utils/_btn.scss";
+@import"./sass/utils/_padding.scss";
 
 body {
   margin: 0;
@@ -10,9 +12,10 @@ body {
 
 .fa-arrow-left {
   display: flex;
-  left: 1rem;
+  /*left: 1rem;*/
+  bottom: 1rem;
   justify-content: center;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .background__image {
@@ -34,10 +37,11 @@ body {
   background: $colour-light-grey;
   margin-top: -2rem;
   position: relative;
-  &__btn{
+
+  &__btn {
     justify-content: center;
     align-items: center;
-    margin: 0 20rem;
+    margin: 0 23rem;
     margin-top: 2rem;
   }
 }
@@ -50,6 +54,7 @@ body {
 
 .menus-meal__entries {
   flex-direction: column;
+
   &__title {
     font-weight: 100;
     position: relative;
@@ -65,16 +70,17 @@ body {
 .menus-meal__entries__choice {
   height: 4.2rem;
   align-items: center;
-  padding: 0.7rem;
+  @include padding;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+  @include box-shadow;
 }
 
 .menus-meal__entries__names {
   flex-direction: column;
   margin: 0;
-&__notch {
+
+  &__notch {
     display: flex;
     justify-content: center;
     width: 5rem;
@@ -127,10 +133,11 @@ p {
 .menus-meal__dish__choice {
   height: 4.2rem;
   align-items: center;
-  padding: 0.7rem;
+  @include padding;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+ @include box-shadow;
+  /*box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);*/
 }
 
 .menus-meal__dish__names {
@@ -178,10 +185,10 @@ p {
 .menus-meal__desserts__choice {
   height: 4.2rem;
   align-items: center;
-  padding: 0.7rem;
+  @include padding;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 20%);
+  @include box-shadow;
 }
 
 .menus-meal__desserts__names {
@@ -209,7 +216,6 @@ p {
   position: absolute;
 }
 
-.bloc__link{
-  color:$colour-white;
+.bloc__link {
+  color: $colour-white;
 }
-

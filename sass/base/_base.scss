@@ -41,14 +41,16 @@ p{
     font-weight: 500;   
 }
 a,
-a:visited {
+a :visited {
     text-decoration: none;
     color:$colour-black;
     padding: 0;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
+.link{
+    text-decoration: none;
+}
 main {
     width: auto;
     margin: auto;
