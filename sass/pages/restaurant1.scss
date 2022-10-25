@@ -1,0 +1,229 @@
+@import"/sass/utils/variable";
+@import"/sass/layout/_header";
+@import"/sass/layout/_bloc";
+@import"/sass/base/_base";
+@import"/sass/utils/_btn";
+@import"/sass/utils/_padding";
+
+body {
+  margin: 0;
+}
+
+.fa-arrow-left {
+  display: flex;
+  /*left: 1rem;*/
+  bottom: 1rem;
+  justify-content: center;
+  /*position: absolute;*/
+}
+
+.background__image {
+  display: flex;
+  height: 22rem;
+
+  & img {
+    flex-direction: row;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.3rem 3rem;
+  border-radius: 3rem 3rem 0 0;
+  background: $colour-light-grey;
+  margin-top: -2rem;
+  position: relative;
+
+  &__btn {
+    justify-content: center;
+    align-items: center;
+    margin: 0 30rem;
+    margin-top: 2rem;
+  }
+}
+
+.menus__title {
+  display: flex;
+  font-size: 1.75rem;
+  justify-content: space-between;
+}
+
+.menus-meal__entries {
+  flex-direction: column;
+
+  &__title {
+    font-weight: 100;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.menus-meal__entries__varied {
+  flex-direction: column;
+  position: relative;
+}
+
+.menus-meal__entries__choice {
+  height: 4.2rem;
+  align-items: center;
+  @include padding;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  @include box-shadow;
+}
+
+.menus-meal__entries__names {
+  flex-direction: column;
+  margin: 0;
+
+  &__notch {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
+    }
+  }
+}
+
+h3,
+p {
+  margin: 0;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+p {
+  padding: 0 0.3rem;
+}
+
+.menus-meal__entries__names__price {
+  right: 3rem;
+  font-weight: 600;
+  height: 3rem;
+  position: absolute;
+}
+
+
+.menus-meal__dish {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 100;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.menus-meal__dish__varied {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menus-meal__dish__choice {
+  height: 4.2rem;
+  align-items: center;
+  @include padding;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+ @include box-shadow;
+}
+
+.menus-meal__dish__names {
+  flex-direction: column;
+  margin: 0;
+
+  &__notch {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
+    }
+  }
+}
+
+.menus-meal__dish__names__price {
+  right: 3rem;
+  font-weight: 600;
+  height: 3rem;
+  position: absolute;
+}
+
+.menus-meal__desserts {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 100;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.menus-meal__desserts__varied {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menus-meal__desserts__choice {
+  height: 4.2rem;
+  align-items: center;
+  @include padding;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  @include box-shadow;
+}
+
+.menus-meal__desserts__names {
+  flex-direction: column;
+  margin: 0;
+
+  &__notch {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    margin-right: -5rem;
+    background: $colour-tertiaire;
+
+    &fa-circle-check {
+      color: $colour-white ;
+      font-size: 2rem;
+    }
+  }
+}
+
+.menus-meal__desserts__names__price {
+  right: 3rem;
+  font-weight: 600;
+  height: 3rem;
+  position: absolute;
+}
+
+.bloc__link {
+  color: $colour-white;
+}
+
+/*desktop*/
+@media screen and (min-width:992px) {
+  
+  .menus{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

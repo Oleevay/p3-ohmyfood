@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;500;700 & family= Shrikhand & display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import"../utils/_variable.scss";
+
 :root {
     margin: 0;
     box-sizing: border-box;
@@ -9,14 +10,13 @@
 body {
     box-sizing: border-box;
     background: $colour-white;
-    ;
     font-family: "Roboto", sans-serif;
     margin: 0;
     width: auto;
 }
 
 h1 {
-    font-family: "Shrikhand",cursive;
+    font-family: "Shrikhand", cursive;
     font-weight: 900;
     font-size: 1.75rem;
 }
@@ -31,26 +31,29 @@ h3 {
     font-weight: 600;
 }
 
-p, li{
-    font-size:1.3rem ;
+p,
+li {
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
-p{
-    font-size:1.3rem ;
-    font-weight: 500;   
+p {
+    font-size: 1.3rem;
+    font-weight: 500;
 }
+
 a,
 a :visited {
     text-decoration: none;
-    color:$colour-black;
+    color: $colour-black;
     padding: 0;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
+
 main {
     width: auto;
     margin: auto;

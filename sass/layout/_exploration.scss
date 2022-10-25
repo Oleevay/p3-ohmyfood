@@ -3,7 +3,7 @@
 @import"../base/_base.scss";
 @import"../components/_button.scss";
 
-.exploration{
+.exploration {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,13 +11,13 @@
     background: $colour-light-grey;
     padding: 2rem 1rem 3rem;
 
-&__heading {
-    margin:  0rem 2rem 1rem 2rem;
-}
-&__text {
-    padding-bottom: 2rem;
-    color:$colour-dark-grey;
-    margin: 0rem;
-}
-}
+    &__heading {
+        margin: 0rem 2rem 1rem 2rem;
+    }
 
+    &__text {
+        padding-bottom: 2rem;
+        color: $colour-dark-grey;
+        margin: 0rem;
+    }
+}

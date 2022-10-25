@@ -7,17 +7,18 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    background:$colour-verylight-grey;
+    background: $colour-verylight-grey;
+
     &__icon {
         display: flex;
-        gap:2.2rem;
+        gap: 2.2rem;
         align-items: center;
         font-weight: 900;
         color: $colour-dark-grey;
+
         &__address {
             color: $colour-dark-grey;
 
+        }
     }
 }
-}
-
