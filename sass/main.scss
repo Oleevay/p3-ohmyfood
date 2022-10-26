@@ -1,21 +1,21 @@
-@import ".\\utils\\_variable";
-@import ".\\utils\\_function";
-@import ".\\utils\\_mixins";
-@import ".\\utils\\_extension";
+@import "./utils/_variable";
+@import "./utils/_mixins";
 
-@import ".\\base\\_base";
-@import ".\\base\\_typography";
+@import "./base/base";
+@import "./base/typography";
 
-@import ".\\components\\_button";
+@import "./components/button";
 
-@import ".\\layout\\_header";
-@import ".\\layout\\_nav";
-@import ".\\layout\\_container";
-@import ".\\layout\\_form";
+@import "./layout/header";
+@import "./layout/search-city";
+@import "./layout/exploration";
+@import "./layout/functioning";
+@import"./layout/_restaurants";
+@import"./layout/_bloc";
 
-@import "./pages/";
-@import "./pages/";
-@import "./pages/";
+@import"./mobile.scss";
+@import "./pages/restaurant1.scss";
+
 
 
 

@@ -2,6 +2,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;500;700 & family= Shrikhand & display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+:root {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  width: auto;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p,
+li {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+a,
+a :visited {
+  text-decoration: none;
+  color: #000000;
+  padding: 0;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+main {
+  width: auto;
+  margin: auto;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -45,7 +102,8 @@ h3 {
   font-weight: 600;
 }
 
-p, li {
+p,
+li {
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -101,69 +159,12 @@ main {
   color: #fff;
 }
 
-/* la version tablette*/
-:root {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  box-sizing: border-box;
-  background: #fff;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  width: auto;
-}
-
-h1 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 900;
-  font-size: 1.75rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-p, li {
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-
-a,
-a :visited {
-  text-decoration: none;
-  color: #000000;
-  padding: 0;
-  cursor: pointer;
-}
-
-.link {
-  text-decoration: none;
-}
-
-main {
-  width: auto;
-  margin: auto;
-}
-
 .btn {
   height: 3.2rem;
   color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#ff7ad9, #9356DC);
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -183,10 +184,11 @@ body {
 
 .fa-arrow-left {
   display: flex;
-  /*left: 1rem;*/
+  top: 1rem;
+  left: 1rem;
   bottom: 1rem;
   justify-content: center;
-  /*position: absolute;*/
+  position: absolute;
 }
 
 .background__image {
@@ -207,12 +209,14 @@ body {
   background: #f6f6f6;
   margin-top: -2rem;
   position: relative;
-}
-.menus__btn {
-  justify-content: center;
-  align-items: center;
-  margin: 0 23rem;
-  margin-top: 2rem;
+  /* @include btn;*/
+  /*&__btn {
+    justify-content: center;
+    align-items: center;
+    margin: 0 30rem;
+    margin-top: 2rem;
+
+  }*/
 }
 
 .menus__title {
@@ -241,7 +245,7 @@ body {
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .menus-meal__entries__names {
@@ -300,7 +304,7 @@ p {
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .menus-meal__dish__names {
@@ -348,7 +352,7 @@ p {
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .menus-meal__desserts__names {
@@ -376,6 +380,15 @@ p {
 
 .bloc__link {
   color: #fff;
+}
+
+/*desktop*/
+@media screen and (min-width: 992px) {
+  .menus {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=restaurant1.css.map */

@@ -1,9 +1,10 @@
-@import"/sass/utils/variable";
-@import"/sass/layout/_header";
-@import"/sass/layout/_bloc";
-@import"/sass/base/_base";
-@import"/sass/utils/_btn";
-@import"/sass/utils/_padding";
+@import"../base/base";
+@import"../layout/header";
+@import"../layout/_bloc";
+@import"../utils/mixins";
+@import"../utils/_variable";
+@import"../components/_button";
+
 
 body {
   margin: 0;
@@ -11,10 +12,11 @@ body {
 
 .fa-arrow-left {
   display: flex;
-  /*left: 1rem;*/
+  top: 1.4rem;
+  left: 1rem;
   bottom: 1rem;
   justify-content: center;
-  /*position: absolute;*/
+  position: absolute;
 }
 
 .background__image {
@@ -33,31 +35,56 @@ body {
   flex-direction: column;
   padding: 1.5rem 1.3rem 3rem;
   border-radius: 3rem 3rem 0 0;
+  font-size: 1.7rem;
   background: $colour-light-grey;
   margin-top: -2rem;
   position: relative;
-
   &__btn {
-    justify-content: center;
-    align-items: center;
-    margin: 0 30rem;
-    margin-top: 2rem;
+    margin: 1rem 20rem;
+    @include btn;
+    
   }
 }
 
-.menus__title {
+
+.menus__title__icon{
   display: flex;
-  font-size: 1.75rem;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    height: 2rem;
+    right: 1rem;
+    top: 4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    position: absolute;
+  
+    &:hover {
+        font-weight: 900;
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 3s;
+    }
+  }
+
 }
+
+
 
 .menus-meal__entries {
   flex-direction: column;
 
   &__title {
     font-weight: 100;
-    position: relative;
+    height: 0.5rem;
+    width: 3rem;
+    position:relative;
     text-transform: uppercase;
+    bottom: 1rem;
+    background-color:$colour-tertiaire;
   }
 }
 
@@ -118,8 +145,12 @@ p {
 
   &__title {
     font-weight: 100;
-    position: relative;
+    height: 0.5rem;
+    width: 3rem;
+    position:relative;
     text-transform: uppercase;
+    bottom: 1rem;
+    background-color:$colour-tertiaire;
   }
 }
 
@@ -169,8 +200,12 @@ p {
 
   &__title {
     font-weight: 100;
-    position: relative;
+    height: 0.5rem;
+    width: 3rem;
+    position:relative;
     text-transform: uppercase;
+    bottom: 1rem;
+    background-color:$colour-tertiaire;
   }
 }
 
