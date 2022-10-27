@@ -143,20 +143,23 @@ main {
   margin: 0;
   padding: 1rem 0rem;
 }
-.bloc p {
+.bloc a {
   font-size: 1rem;
   font-weight: 400;
-  color: #fff;
   margin: 0;
   padding: 0.3rem;
 }
-.bloc p i {
+.bloc a i {
   color: #fff;
   padding-right: 1rem;
 }
 
 .bloc__link {
+  font-size: 1rem;
+  font-weight: 400;
   color: #fff;
+  margin: 0;
+  padding: 0.3rem;
 }
 
 .btn {
@@ -212,7 +215,8 @@ body {
   position: relative;
 }
 .menus__btn {
-  margin: 1rem 20rem;
+  margin: 1rem 27rem;
+  justify-content: center;
   height: 3.2rem;
   color: #fff;
   font-weight: 500;
@@ -231,12 +235,11 @@ body {
   opacity: 0.8;
 }
 
-.menus__title__icon {
-  display: flex;
+.menus__title {
   justify-content: center;
   align-items: center;
 }
-.menus__title__icon__icon {
+.menus__title__icon {
   height: 2rem;
   right: 1rem;
   top: 4rem;
@@ -244,7 +247,7 @@ body {
   font-weight: 400;
   position: absolute;
 }
-.menus__title__icon__icon:hover {
+.menus__title__icon:hover {
   font-weight: 900;
   background: -webkit-linear-gradient(#ff7ad9, #9356DC);
   -webkit-background-clip: text;
@@ -284,15 +287,15 @@ body {
 .menus-meal__entries__names {
   flex-direction: column;
   margin: 0;
+  overflow: hidden;
 }
 .menus-meal__entries__names__notch {
-  display: flex;
   justify-content: center;
   width: 5rem;
-  margin-right: -5rem;
+  margin-right: 5rem;
   background: #99E2D0;
 }
-.menus-meal__entries__names__notchfa-circle-check {
+.menus-meal__entries__names__notch fa-circle-check {
   color: #fff;
   font-size: 2rem;
 }
@@ -424,12 +427,5 @@ p {
 }
 
 /*desktop*/
-@media screen and (min-width: 992px) {
-  .menus {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

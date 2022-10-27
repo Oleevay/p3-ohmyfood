@@ -40,18 +40,17 @@ body {
   margin-top: -2rem;
   position: relative;
   &__btn {
-    margin: 1rem 20rem;
+    margin: 1rem 27rem;
+    justify-content: center;
     @include btn;
     
   }
 }
 
-
-.menus__title__icon{
-  display: flex;
+.menus__title{
   justify-content: center;
   align-items: center;
-  &__icon {
+  &__icon{
     height: 2rem;
     right: 1rem;
     top: 4rem;
@@ -69,10 +68,7 @@ body {
         transition: 3s;
     }
   }
-
 }
-
-
 
 .menus-meal__entries {
   flex-direction: column;
@@ -105,15 +101,15 @@ body {
 .menus-meal__entries__names {
   flex-direction: column;
   margin: 0;
+  overflow: hidden;
 
   &__notch {
-    display: flex;
     justify-content: center;
     width: 5rem;
-    margin-right: -5rem;
+    margin-right: 5rem;
     background: $colour-tertiaire;
 
-    &fa-circle-check {
+    & fa-circle-check {
       color: $colour-white ;
       font-size: 2rem;
     }
@@ -254,11 +250,3 @@ p {
 }
 
 /*desktop*/
-@media screen and (min-width:992px) {
-  
-  .menus{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
