@@ -3,7 +3,6 @@
 @import"../layout/_bloc";
 @import"../utils/mixins";
 @import"../utils/_variable";
-@import"../components/_button";
 
 
 body {
@@ -31,28 +30,31 @@ body {
 }
 
 .menus {
-  display: flex;
-  flex-direction: column;
   padding: 1.5rem 1.3rem 3rem;
   border-radius: 3rem 3rem 0 0;
   font-size: 1.7rem;
   background: $colour-light-grey;
   margin-top: -2rem;
   position: relative;
+
   &__btn {
-    /*margin: 1rem 27rem;*/
+    @include btn;
+    padding: 1rem 5rem;
     justify-content: center;
     align-items: center;
-
+    margin: 1rem 20rem;
   }
 }
 
-.menus__title {
-  justify-content: center;
-  align-items: center;
-  &__icon{
+.menus-title {
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    justify-content: center;
+    align-items: center;
     @include icon;
-  } 
+  }
 }
 
 .menus-meal__entries {
@@ -71,59 +73,64 @@ body {
 
 .menus-meal__entries__varied {
   flex-direction: column;
-  position: relative;
+  margin-bottom: 1rem;
 }
 
 .menus-meal__entries__choice {
-  height: 4.2rem;
+  height: 5.4rem;
+  width: 99%;
   align-items: center;
-  @include padding;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  @include box-shadow;
-}
-
-.menus-meal__entries__names {
-  display: flex;
-  flex-direction: column;
+  padding: 0rem 0.3rem;
   overflow: hidden;
+  margin-bottom: 1.3rem;
+  border-radius: 1.3rem;
+  @include box-shadow;
 
   &__notch {
-    justify-content: center;
-    height: 1.7rem;
-    width: 2rem;
+    height: 2.2rem;
     right: 1rem;
-    margin-right: -1rem;
     padding: 1.6rem;
+    border-radius: 0 1.3rem 1.3rem 0;
     background: $colour-tertiaire;
     position: absolute;
 
-    & fa-circle-check {
-      background-color: $colour-white ;
+    &:hover {
+      transition: 300ms ease-in-out;
+      animation-delay: 5s;
+      animation: both;
+      cursor: pointer;
+    }
+
+    & i {
+      color: white;
       font-size: 2rem;
     }
   }
 }
 
-h3,
-p {
-  margin: 0;
-  align-items: center;
+.menus-meal__entries__names {
+  display: flex;
   flex-direction: column;
-  padding: 0.3rem;
-}
 
-p {
-  padding: 0 0.3rem;
+  & h3,
+  p {
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.7rem 0.8rem 0.1rem;
+  }
+
+  & p {
+    padding-top: 0.3rem;
+  }
 }
 
 .menus-meal__entries__names__price {
-  right: 3rem;
-  font-weight: 600;
+  right: 7rem;
+  font-weight: 500;
   height: 3rem;
   position: absolute;
 }
-
 
 .menus-meal__dish {
   display: flex;
@@ -143,43 +150,54 @@ p {
 .menus-meal__dish__varied {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .menus-meal__dish__choice {
-  height: 4.2rem;
-  align-items: center;
-  @include padding;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  @include box-shadow;
-}
-
-.menus-meal__dish__names {
   display: flex;
-  flex-direction: column;
+  height: 5.4rem;
+  width: 99%;
+  align-items: center;
   overflow: hidden;
+  margin-bottom: 1.3rem;
+  border-radius: 1.3rem;
+  @include box-shadow;
 
   &__notch {
     justify-content: center;
-    height: 1.7rem;
-    width: 2rem;
+    height: 2.2rem;
     right: 1rem;
-    margin-right: -1rem;
     padding: 1.6rem;
+    border-radius: 0 1.3rem 1.3rem 0;
     background: $colour-tertiaire;
     position: absolute;
 
-    & fa-circle-check {
-      background-color: $colour-white ;
+    & i {
+      color: white;
       font-size: 2rem;
     }
   }
 }
 
+.menus-meal__dish__names {
+  display: flex;
+  flex-direction: column;
+
+  & h3,
+  p {
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.7rem 0.8rem 0.1rem;
+  }
+
+  & p {
+    padding-top: 0.3rem;
+  }
+}
+
 .menus-meal__dish__names__price {
-  right: 3rem;
-  font-weight: 600;
+  right: 7rem;
+  font-weight: 500;
   height: 3rem;
   position: absolute;
 }
@@ -202,42 +220,54 @@ p {
 .menus-meal__desserts__varied {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .menus-meal__desserts__choice {
-  height: 4.2rem;
+  height: 5.4rem;
+  width: 99%;
   align-items: center;
-  @include padding;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  @include box-shadow;
-}
-
-.menus-meal__desserts__names {
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+  margin-bottom: 1.3rem;
+  border-radius: 1.3rem;
+  @include box-shadow;
+
   &__notch {
+    display: flex;
     justify-content: center;
-    height: 1.7rem;
-    width: 2rem;
+    height: 2.2rem;
     right: 1rem;
-    margin-right: -1rem;
     padding: 1.6rem;
+    border-radius: 0 1.3rem 1.2rem 0;
     background: $colour-tertiaire;
     position: absolute;
 
-    & fa-circle-check {
-      background-color: $colour-white ;
+    & i {
+      color: white;
       font-size: 2rem;
     }
   }
 }
 
+.menus-meal__desserts__names {
+  display: flex;
+  flex-direction: column;
+
+  & h3,
+  p {
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.7rem 0.8rem 0.1rem;
+  }
+
+  & p {
+    padding-top: 0.3rem;
+  }
+}
+
 .menus-meal__desserts__names__price {
-  right: 3rem;
-  font-weight: 600;
+  right: 7rem;
+  font-weight: 500;
   height: 3rem;
   position: absolute;
 }
@@ -245,5 +275,3 @@ p {
 .bloc__link {
   color: $colour-white;
 }
-
-/*desktop*/
