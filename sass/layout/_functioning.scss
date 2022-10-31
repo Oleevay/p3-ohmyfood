@@ -3,12 +3,12 @@
 @import"../utils/_mixins";
 
 .functioning {
-    padding: 2rem 1.3rem 3rem;
+    padding: 2rem 1rem;
     flex-direction: column;
 
     & h2 {
         width: 98%;
-        margin-bottom: 1.9rem;
+        margin-top:0rem;
     }
 
     & ol {
@@ -35,9 +35,9 @@
             text-align: center;
             justify-content: center;
             position: absolute;
-            margin-left: -1.2rem;
+            left: -0.75rem;
             background: $colour-primary;
-            border-radius: 30px;
+            border-radius: 100px;
         }
 
         & i {

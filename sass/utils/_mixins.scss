@@ -1,5 +1,5 @@
 @mixin box-shadow {
-    box-shadow: 0 0 0.5rem #00000033
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000033;
 }
 
 @mixin padding {
@@ -10,13 +10,13 @@
     height: 3.2rem;
     color: $colour-white;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-image: linear-gradient($colour-secondary,
             $colour-primary);
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
-    box-shadow: 0px 0px 16px #0000002e;
+   @include box-shadow;
     cursor: pointer;
     transition: all 1.1s;
 
@@ -28,16 +28,13 @@
 }
 
 
-@mixin icon {
-    height: 2rem;
-    right: 1rem;
-    bottom: 3.5rem;
+@mixin icon{
+    display: flex;
+    right: 2rem;
+    top:0.9rem;
     font-size: 2rem;
     transition: 3s;
-    font-weight: 400;
     position: absolute;
-   
-
     &:hover {
         font-weight: 900;
         background: -webkit-linear-gradient($colour-secondary, $colour-primary);
