@@ -229,6 +229,7 @@ main {
   margin: 0rem;
 }
 .exploration__btn {
+  display: flex;
   height: 3.2rem;
   color: #fff;
   font-weight: 500;
@@ -321,7 +322,7 @@ main {
 }
 .functioning li {
   background-color: #f3f3f3;
-  width: 98%;
+  width: 100%;
   padding: 0.75rem 0.4rem;
   border-radius: 1rem;
   position: relative;
@@ -354,7 +355,7 @@ li:hover i {
 }
 
 /*desktop*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1027px) {
   .functioning ol {
     flex-direction: row;
   }
@@ -455,7 +456,7 @@ li:hover i {
 }
 
 /*desktop*/
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 1027px) {
   .restaurants-cards {
     height: auto;
     flex-wrap: wrap;
@@ -469,14 +470,13 @@ li:hover i {
 /*tablette*/
 @media screen and (min-width: 769px) {
   .restaurants-cards {
-    height: auto;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     background-color: #fff;
   }
   .restaurants-link {
-    width: 46%;
+    width: 49%;
   }
 }
 :root {

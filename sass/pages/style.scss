@@ -31,60 +31,63 @@ body {
 }
 
 .menus {
-padding: 1.5rem 1.3rem 3rem;
+  padding: 1.5rem 1.3rem 3rem;
   border-radius: 2rem 2rem 0 0;
   font-size: 1.7rem;
   background: $colour-light-grey;
   margin-top: -2rem;
+  align-items: center;
   position: relative;
+}
 
-  &__btn {
-    @include btn;
-    padding: 1rem 5rem;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 25.7rem;
-  }
-}
-.menus__container{
-display: flex;
-align-items:center ;
-justify-content: space-between;
-padding: 1rem 2rem 0rem 1rem;
-}
-.menus-title {
+.menus__container {
   display: flex;
-  &__heart{
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 0rem 1rem;
+}
+
+.menus__title {
+  display: flex;
+
+  &__heart {
     justify-content: center;
     align-items: center;
-    position:relative;
     @include icon;
   }
+}
+
+.menus-meal{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .menus-meal__entries {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 3rem;
 
   &__title {
     font-weight: 100;
-    height: 0.5rem;
     position: relative;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
-  &__title:after{
-    content:"";
-    width:3rem;
-    height:0.4rem;
+
+  &__title:after {
+    content: "";
+    width: 3rem;
+    height: 0.4rem;
     bottom: -1.2rem;
+    margin: 1rem 0;
     left: 0;
     position: absolute;
     background-color: $colour-tertiaire;
   }
 }
 
-.menus-meal__loading{
+.menus-meal__loading {
   /*transform: scale(0);*/
   transition: 300ms ease-in-out;
   animation: both;
@@ -94,45 +97,60 @@ padding: 1rem 2rem 0rem 1rem;
 .menus-meal__choice {
   align-items: center;
   padding: 1rem;
-  margin:1rem 0rem 1.3rem;
+  margin: 1rem 0rem 1.3rem;
   border-radius: 0.75rem;
+  position:relative;
   background-color: $colour-white;
   @include box-shadow;
   overflow: hidden;
-
 }
 
-.menus-meal__notch{
+.menus-meal__notch {
   display: flex;
-  width:4rem;
-  right: 1rem;
+  height: 3rem;
+  width: 4rem;
+  right:1rem;
+  border-radius:0  0.75rem 0.75rem 0;
   align-items: center;
   justify-content: center;
-  margin-right: -1rem;
+ /* margin-right: -2.8rem;*/
   background: $colour-tertiaire;
- position: absolute;
- transition-duration:0.7s ;
+  position: absolute;
+  transition-duration: 0.7s;
+
+  &:hover {
+    margin-right: -1rem;
+  }
+
   & i {
     color: white;
-    font-size:1.6rem;
-    transform: rotate(180deg);
-    transition-duration: 0.7s;
-  }
+    font-size: 1.6rem;
+    &:hover{
+      transform: rotate(360deg);
+      transition-duration: 0.7s;
+    }  
+}
 }
 
 .menus-meal__names {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   & h3,
   p {
     margin: 0;
-    align-items: center;
+    align-items: center;white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+  
 }
 
 .menus-meal__price {
-  right: 7rem;
+  right: 2.2rem;
   font-weight: 500;
   position: absolute;
 }
@@ -140,147 +158,69 @@ padding: 1rem 2rem 0rem 1rem;
 .menus-meal__dish {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 3rem;
 
   &__title {
     font-weight: 100;
-    height: 0.5rem;
     position: relative;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
-  &__title:after{
-    content:"";
-    width:3rem;
-    height:0.4rem;
+
+  &__title:after {
+    content: "";
+    width: 3rem;
+    height: 0.4rem;
+    margin: 1rem 0;
     bottom: -1.2rem;
     left: 0;
     position: absolute;
     background-color: $colour-tertiaire;
   }
-}
-
-.menus-meal__loading {
-   /*transform: scale(0);*/
-   transition: 300ms ease-in-out;
-   animation: both;
-   cursor: pointer;
-  }
-
-.menus-meal__choice {
-  align-items: center;
-  padding: 1rem;
-  margin:1rem 0rem 1.3rem ;
-  border-radius: 0.75rem;
-  background-color: $colour-white;
-  @include box-shadow;
-  overflow: hidden;
-}
-
-.menus-meal__notch{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:4rem;
-  right: 1rem;
-  background: $colour-tertiaire;
- position: absolute;
- transition-duration:0.7s ;
-  & i {
-    color: white;
-    font-size:1.6rem;
-    transform: rotate(180deg);
-    transition-duration: 0.7s;
-  }
-}
-.menus-meal__names {
-  display: flex;
-  flex-direction: column;
-
-  & h3,
-  p {
-    margin: 0;
-    align-items: center;
-  }
-}
-
-.menus-meal__price {
-  right: 7rem;
-  font-weight: 500;
-  position: absolute;
 }
 
 .menus-meal__desserts {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 3rem;
+
   &__title {
     font-weight: 100;
-    height: 0.5rem;
     position: relative;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
-  &__title:after{
-    content:"";
-    width:3rem;
-    height:0.4rem;
+
+  &__title:after {
+    content: "";
+    width: 3rem;
+    height: 0.4rem;
+    margin: 1rem 0;
     bottom: -1.2rem;
     left: 0;
     position: absolute;
     background-color: $colour-tertiaire;
-
   }
 }
 
-.menus-meal__loading{
-   /*transform: scale(0);*/
-   transition: 300ms ease-in-out;
-   animation: both;
-   cursor: pointer;
-}
-
-.menus-meal__choice {
-  align-items: center;
-  margin:1rem 0rem 1.3rem;
-  border-radius: 0.75rem;
-  background-color: $colour-white;
-  @include box-shadow;
-  overflow: hidden;
-}
-
-.menus-meal__notch{
+.menus__btn {
   display: flex;
+  margin-left: 35rem;
   align-items: center;
   justify-content: center;
-  width:4rem;
-  right: 1rem;
-  background: $colour-tertiaire;
- position: absolute;
- transition-duration:0.7s ;
-  & i {
-    color: white;
-    font-size:1.6rem;
-    transform: rotate(180deg);
-    transition-duration: 0.7s;
-  }
-}
-
-.menus-meal__names {
-  display: flex;
-  flex-direction: column;
-
-  & h3,
-  p {
-    margin: 0;
-    align-items: center;;
-  }
-}
-
-.menus-meal__price {
-  right: 7rem;
-  font-weight: 500;
-  position: absolute;
+  background: $colour-light-grey;
+  @include btn;
 }
 
 .bloc__link {
   color: $colour-white;
+}
+
+/*desktop*/
+@media screen and (min-width:1027px) {
+  .menus-meal{
+    flex-direction:row;
+    gap: 1.2rem;
+
+  }
 }

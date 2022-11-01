@@ -78,7 +78,7 @@
 
 
 /*desktop*/
-@media screen and (min-width:993px) {
+@media screen and (min-width:1027px) {
     .restaurants-cards {
         height: auto;
         flex-wrap: wrap;
@@ -95,7 +95,6 @@
 /*tablette*/
 @media screen and (min-width:769px) {
     .restaurants-cards {
-        height: auto;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
@@ -103,6 +102,6 @@
     }
 
     .restaurants-link {
-        width: 46%;
+        width: 49%;
     }
 }
