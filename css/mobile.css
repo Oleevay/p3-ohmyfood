@@ -34,7 +34,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p,
@@ -105,7 +105,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p,
@@ -181,7 +181,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p,
@@ -229,20 +229,22 @@ main {
   margin: 0rem;
 }
 .exploration__btn {
-  display: flex;
   height: 3.2rem;
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(#ff7ad9, #9356DC);
   padding: 0.75rem 1.5rem;
+  /* padding: 0.75rem 3rem;*/
   border: none;
   border-radius: 2rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 1.1s;
 }
-.exploration__btn.btn:hover {
+.exploration__btn :hover {
   transform: scale(1.1);
   color: #0065fc;
   opacity: 0.8;
@@ -274,7 +276,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p,
@@ -418,10 +420,13 @@ li:hover i {
 }
 
 .restaurants-description {
-  display: flex;
+  /* display: flex;*/
   flex-direction: column;
   padding: 1rem;
   position: relative;
+}
+.restaurants-description:hover {
+  font-weight: 400;
 }
 .restaurants-description h3,
 .restaurants-description p {
@@ -433,20 +438,16 @@ li:hover i {
 .restaurants-description p {
   font-weight: 300;
 }
-.restaurants-description .heart {
-  height: 2rem;
-  width: 2rem;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  display: flex;
+.restaurants-description .fa-heart {
+  font-weight: 400;
+  font-weight: 400;
   right: 2rem;
   top: 0.9rem;
   font-size: 2rem;
-  transition: 3s;
+  transition: 1s;
   position: absolute;
 }
-.restaurants-description .heart:hover {
+.restaurants-description .fa-heart:hover {
   font-weight: 900;
   background: -webkit-linear-gradient(#ff7ad9, #9356DC);
   -webkit-background-clip: text;
@@ -505,7 +506,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p,

@@ -31,33 +31,39 @@ body {
 }
 
 .menus {
-  padding: 1.5rem 1.3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 1.3rem 5rem;
   border-radius: 2rem 2rem 0 0;
-  font-size: 1.7rem;
   background: $colour-light-grey;
   margin-top: -2rem;
   align-items: center;
   position: relative;
+
+  &__btn {
+    @include btn;
+  }
 }
 
-.menus__container {
+.menus-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem 0rem 1rem;
-}
+  width: 100%;
+  font-size: 1.7rem;
+  padding: 0rem 2rem 0rem;
 
-.menus__title {
-  display: flex;
 
-  &__heart {
-    justify-content: center;
+  & .fa-heart {
+    height: 2rem;
+    width: 2rem;
     align-items: center;
+    justify-content: center;
     @include icon;
   }
 }
 
-.menus-meal{
+.menus-meal {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -66,7 +72,6 @@ body {
 .menus-meal__entries {
   flex-direction: column;
   width: 100%;
-  margin-bottom: 3rem;
 
   &__title {
     font-weight: 100;
@@ -77,8 +82,8 @@ body {
 
   &__title:after {
     content: "";
-    width: 3rem;
-    height: 0.4rem;
+    width: 3.5rem;
+    height: 0.25rem;
     bottom: -1.2rem;
     margin: 1rem 0;
     left: 0;
@@ -99,7 +104,7 @@ body {
   padding: 1rem;
   margin: 1rem 0rem 1.3rem;
   border-radius: 0.75rem;
-  position:relative;
+  position: relative;
   background-color: $colour-white;
   @include box-shadow;
   overflow: hidden;
@@ -108,12 +113,13 @@ body {
 .menus-meal__notch {
   display: flex;
   height: 3rem;
+  top: 1rem;
   width: 4rem;
-  right:1rem;
-  border-radius:0  0.75rem 0.75rem 0;
+  right: 1rem;
+  border-radius: 0 0.75rem 0.75rem 0;
   align-items: center;
   justify-content: center;
- /* margin-right: -2.8rem;*/
+  /* margin-right: -2.8rem;*/
   background: $colour-tertiaire;
   position: absolute;
   transition-duration: 0.7s;
@@ -125,11 +131,12 @@ body {
   & i {
     color: white;
     font-size: 1.6rem;
-    &:hover{
+
+    &:hover {
       transform: rotate(360deg);
       transition-duration: 0.7s;
-    }  
-}
+    }
+  }
 }
 
 .menus-meal__names {
@@ -142,11 +149,11 @@ body {
   & h3,
   p {
     margin: 0;
-    align-items: center;white-space: nowrap;
+    align-items: center;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
 }
 
 .menus-meal__price {
@@ -158,7 +165,6 @@ body {
 .menus-meal__dish {
   flex-direction: column;
   width: 100%;
-  margin-bottom: 3rem;
 
   &__title {
     font-weight: 100;
@@ -169,8 +175,8 @@ body {
 
   &__title:after {
     content: "";
-    width: 3rem;
-    height: 0.4rem;
+    width: 3.2rem;
+    height: 0.25rem;
     margin: 1rem 0;
     bottom: -1.2rem;
     left: 0;
@@ -182,7 +188,7 @@ body {
 .menus-meal__desserts {
   flex-direction: column;
   width: 100%;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 
   &__title {
     font-weight: 100;
@@ -194,7 +200,7 @@ body {
   &__title:after {
     content: "";
     width: 3rem;
-    height: 0.4rem;
+    height: 0.25rem;
     margin: 1rem 0;
     bottom: -1.2rem;
     left: 0;
@@ -203,23 +209,14 @@ body {
   }
 }
 
-.menus__btn {
-  display: flex;
-  margin-left: 35rem;
-  align-items: center;
-  justify-content: center;
-  background: $colour-light-grey;
-  @include btn;
-}
-
 .bloc__link {
   color: $colour-white;
 }
 
 /*desktop*/
 @media screen and (min-width:1027px) {
-  .menus-meal{
-    flex-direction:row;
+  .menus-meal {
+    flex-direction: row;
     gap: 1.2rem;
 
   }

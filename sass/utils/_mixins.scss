@@ -7,21 +7,23 @@
 }
 
 @mixin btn {
-    display: flex;
     height: 3.2rem;
     color: $colour-white;
     font-weight: 500;
     font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient($colour-secondary,
             $colour-primary);
     padding: 0.75rem 1.5rem;
+   /* padding: 0.75rem 3rem;*/
     border: none;
     border-radius: 2rem;
-   @include box-shadow;
+    @include box-shadow;
     cursor: pointer;
     transition: all 1.1s;
 
-    &.btn:hover {
+    & :hover {
         transform: scale(1.1);
         color: $colour-blue;
         opacity: 0.8;
@@ -29,13 +31,14 @@
 }
 
 
-@mixin icon{
-    display: flex;
+@mixin icon {
+    font-weight:400;
     right: 2rem;
-    top:0.9rem;
+    top: 0.9rem;
     font-size: 2rem;
-    transition: 3s;
+    transition: 1s;
     position: absolute;
+
     &:hover {
         font-weight: 900;
         background: -webkit-linear-gradient($colour-secondary, $colour-primary);

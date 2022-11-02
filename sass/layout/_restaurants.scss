@@ -49,29 +49,30 @@
 }
 
 .restaurants-description {
-    display: flex;
+    /* display: flex;*/
     flex-direction: column;
     padding: 1rem;
     position: relative;
+
+    &:hover {
+        font-weight: 400;
+    }
 
     & h3,
     p {
         margin: 0rem;
     }
-    
-   & h3 {
+
+    & h3 {
         margin-bottom: 0.2rem;
     }
 
-  &  p {
+    & p {
         font-weight: 300;
     }
-    .heart{ 
-        height: 2rem;
-        width:2rem;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+
+    .fa-heart {
+        font-weight: 400;
         @include icon;
     }
 }
