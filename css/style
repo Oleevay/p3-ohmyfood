@@ -226,9 +226,16 @@ body {
   padding: 0rem 2rem 0rem;
 }
 .menus-container .fa-heart {
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   right: 2rem;
+  top: 0.9rem;
   font-size: 2rem;
+  transition: 1s;
   position: absolute;
 }
 .menus-container .fa-heart:hover {
@@ -268,43 +275,45 @@ body {
 }
 
 .menus-meal__loading {
+  /*transform: scale(0);*/
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-}
-.menus-meal__loading:hover .menus-meal__notch {
-  margin-right: 6rem;
 }
 
 .menus-meal__choice {
   align-items: center;
   padding: 1rem;
   margin: 1rem 0rem 1.3rem;
-  border-radius: 1.3rem;
+  border-radius: 0.75rem;
   position: relative;
   background-color: #fff;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .menus-meal__notch {
-  height: 5.25rem;
-  width: 5rem;
-  top: 0rem;
-  right: -7rem;
-  border-radius: 0 1.3rem 1.3rem 0;
-  background: #99E2D0;
-  position: absolute;
-  transition-duration: 0.5s;
-}
-.menus-meal__notch .fa-circle-check {
   display: flex;
-  height: 5rem;
-  color: white;
+  height: 3rem;
+  top: 1rem;
+  width: 4rem;
+  right: 1rem;
+  border-radius: 0 0.75rem 0.75rem 0;
   align-items: center;
   justify-content: center;
+  /* margin-right: -2.8rem;*/
+  background: #99E2D0;
+  position: absolute;
+  transition-duration: 0.7s;
+}
+.menus-meal__notch:hover {
+  margin-right: -1rem;
+}
+.menus-meal__notch i {
+  color: white;
   font-size: 1.6rem;
 }
-.menus-meal__notch .fa-circle-check:hover {
+.menus-meal__notch i:hover {
   transform: rotate(360deg);
   transition-duration: 0.7s;
 }
@@ -312,7 +321,9 @@ body {
 .menus-meal__names {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menus-meal__names h3,
 .menus-meal__names p {
@@ -324,8 +335,9 @@ body {
 }
 
 .menus-meal__price {
-  margin-left: 20rem;
+  right: 2.2rem;
   font-weight: 500;
+  position: absolute;
 }
 
 .menus-meal__dish {
@@ -383,4 +395,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.map */

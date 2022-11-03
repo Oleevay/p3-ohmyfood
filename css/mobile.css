@@ -420,10 +420,10 @@ li:hover i {
 }
 
 .restaurants-description {
-  /* display: flex;*/
+  display: flex;
   flex-direction: column;
   padding: 1rem;
-  position: relative;
+  width: 100%;
 }
 .restaurants-description:hover {
   font-weight: 400;
@@ -440,11 +440,8 @@ li:hover i {
 }
 .restaurants-description .fa-heart {
   font-weight: 400;
-  font-weight: 400;
   right: 2rem;
-  top: 0.9rem;
   font-size: 2rem;
-  transition: 1s;
   position: absolute;
 }
 .restaurants-description .fa-heart:hover {

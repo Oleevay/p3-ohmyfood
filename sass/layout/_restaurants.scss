@@ -49,11 +49,10 @@
 }
 
 .restaurants-description {
-    /* display: flex;*/
+    display: flex;
     flex-direction: column;
     padding: 1rem;
-    position: relative;
-
+    width: 100%; 
     &:hover {
         font-weight: 400;
     }
@@ -71,8 +70,7 @@
         font-weight: 300;
     }
 
-    .fa-heart {
-        font-weight: 400;
+   & .fa-heart {
         @include icon;
     }
 }

@@ -30,13 +30,10 @@
     }
 }
 
-
 @mixin icon {
     font-weight:400;
     right: 2rem;
-    top: 0.9rem;
     font-size: 2rem;
-    transition: 1s;
     position: absolute;
 
     &:hover {
