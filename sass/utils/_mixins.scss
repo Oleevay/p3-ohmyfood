@@ -7,7 +7,7 @@
 }
 
 @mixin btn {
-    height: 3.2rem;
+    height: 3.92rem;
     color: $colour-white;
     font-weight: 500;
     font-size: 1.1rem;
@@ -15,7 +15,7 @@
     justify-content: center;
     background-image: linear-gradient($colour-secondary,
             $colour-primary);
-    padding: 0.75rem 3rem;
+    padding: 0.75rem 1.8rem;
     border: none;
     border-radius: 2rem;
     @include box-shadow;
@@ -30,16 +30,16 @@
 }
 
 @mixin icon {
-    font-weight:400;
+    font-weight: 400;
     right: 2rem;
-    font-size: 2rem;
+    bottom: 3rem;
+    font-size: 1.7rem;
     position: absolute;
 
     &:hover {
         font-weight: 900;
-        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        background: linear-gradient($colour-secondary, $colour-primary);
         -webkit-background-clip: text;
-        -moz-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }

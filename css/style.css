@@ -27,18 +27,18 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
 p,
 li {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -98,18 +98,18 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
 p,
 li {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -163,10 +163,6 @@ main {
   padding: 0.3rem;
 }
 
-body {
-  margin: 0;
-}
-
 .fa-arrow-left {
   display: flex;
   top: 1.4rem;
@@ -190,7 +186,6 @@ body {
 .menus {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 1.5rem 1.3rem 5rem;
   border-radius: 3rem 3rem 0 0;
   background: #f6f6f6;
@@ -199,14 +194,14 @@ body {
   position: relative;
 }
 .menus__btn {
-  height: 3.2rem;
+  height: 3.92rem;
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(#ff7ad9, #9356DC);
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 1.8rem;
   border: none;
   border-radius: 2rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -226,9 +221,11 @@ body {
   padding: 0rem 2rem 0rem;
 }
 .menus-container .fa-heart {
+  top: 3rem;
   font-weight: 400;
   right: 2rem;
-  font-size: 2rem;
+  bottom: 3rem;
+  font-size: 1.7rem;
   position: absolute;
 }
 .menus-container .fa-heart:hover {
@@ -249,6 +246,25 @@ body {
 .menus-meal__entries {
   flex-direction: column;
   width: 100%;
+}
+.menus-meal__entries .entries1 {
+  animation-delay: 100ms;
+}
+.menus-meal__entries .entries2 {
+  animation-delay: 200ms;
+}
+.menus-meal__entries .entries3 {
+  animation-delay: 300ms;
+}
+@keyframes loading {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .menus-meal__entries__title {
   font-weight: 100;
@@ -271,10 +287,13 @@ body {
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  overflow: hidden;
+}
+.menus-meal__loading:hover fa-circle-check {
+  transform: rotate(360deg);
+  transition-duration: 0.9s;
 }
 .menus-meal__loading:hover .menus-meal__notch {
-  margin-right: 6rem;
+  margin-right: 5rem;
 }
 
 .menus-meal__choice {
@@ -285,13 +304,15 @@ body {
   position: relative;
   background-color: #fff;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .menus-meal__notch {
   height: 5.25rem;
-  width: 5rem;
+  width: 4.8rem;
   top: 0rem;
   right: -5.99rem;
+  align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: #99E2D0;
   position: absolute;
@@ -301,31 +322,28 @@ body {
   display: flex;
   height: 5rem;
   color: white;
+  padding-right: 1rem;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-}
-.menus-meal__notch .fa-circle-check:hover {
-  transform: rotate(360deg);
-  transition-duration: 0.7s;
 }
 
 .menus-meal__names {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .menus-meal__names h3,
 .menus-meal__names p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin: 0;
   align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menus-meal__price {
-  margin-left: 20rem;
+  align-items: flex-end;
+  gap: 5rem;
   font-weight: 500;
 }
 
@@ -336,6 +354,7 @@ body {
 .menus-meal__dish__title {
   font-weight: 100;
   position: relative;
+  top: 1rem;
   text-transform: uppercase;
   padding-bottom: 0.5rem;
 }
@@ -377,7 +396,15 @@ body {
 }
 
 /*desktop*/
-@media screen and (min-width: 1027px) {
+@media screen and (min-width: 768px) {
+  body {
+    width: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    width: auto;
+  }
   .menus-meal {
     flex-direction: row;
     gap: 1.2rem;

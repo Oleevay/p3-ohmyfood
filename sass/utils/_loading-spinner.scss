@@ -1,0 +1,64 @@
+@keyframes loading {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.loading-spinner {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: $colour-light-grey;
+    opacity: 0.8;
+    border-radius: 50%;
+    perspective: 23rem;
+}
+
+.loading-spinner .loading-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loading .loading-animation:ntch-child(1) {
+    border-bottom: 0.375rem solid $colour-primary ;
+    transform: rotateX(35deg) ritateY(-45deg);
+    animation: rotate-one 1s linear infinite;
+}
+
+.loading .loading-animation:ntch-child(2) {
+    border-right: 0.375rem solid $colour-secondary ;
+    transform: rotateX(50deg) ritateY(10deg);
+    animation: rotate-two 1s linear infinite;
+}
+
+.loading .loading-animation:ntch-child(3) {
+    border-top: 0.375rem solid $colour-tertiaire ;
+    transform: rotateX(35deg) ritateY(55deg);
+    animation: rotate-three 1s linear infinite;
+}
+
+@keyframes rotate-one {
+    to {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-two {
+    to {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate-three {
+    to {
+        transform: rotateX(50deg) rotateY(20deg) rotateZ(360deg);
+    }
+}
