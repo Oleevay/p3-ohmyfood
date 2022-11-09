@@ -18,9 +18,8 @@
   display: flex;
 
   & img {
-    max-height: 100%;
+    max-height: 32rem;
     max-width: 100%;
-    height: 32rem;
     width: 100%;
     object-fit: cover;
   }
@@ -29,13 +28,13 @@
 .menus {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1.3rem 5rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 3rem 3rem 0 0;
+  padding:0rem 0rem 5rem;
   background: $colour-light-grey;
   margin-top: -2rem;
-  align-items: center;
   position: relative;
-
   &__btn {
     @include btn;
   }
@@ -44,11 +43,10 @@
 .menus-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0rem 2rem 0rem;
+  width: 98%;
+  padding: 1rem 2rem 0rem 5rem;
 
   & .fa-heart {
-    top: 3rem;
     @include icon;
   }
 }
@@ -61,30 +59,19 @@
 
 .menus-meal__entries {
   flex-direction: column;
-  width: 100%; 
-    @for $i from 1 through 3{
-  .entries#{($i)}{
-    animation-delay:100ms*$i;
-  }
-}
-
-@keyframes loading{
-  0%{transform: translateY(30%);
-      opacity:0;
-    }
-   
-100%{transform: translateY(0);
-  opacity:1;  
-  }
-}
- 
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
+  
+  
+  
   &__title {
     font-weight: 100;
-   position: relative;
+    position: relative;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
-
+  
   &__title:after {
     content: "";
     width: 3.5rem;
@@ -101,8 +88,9 @@
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  &:hover .menus-meal__notch{
-    margin-right:5rem;
+  
+  &:hover .menus-meal__notch {
+    margin-right:3rem;
   }
 }
 
@@ -114,20 +102,42 @@
   position: relative;
   background-color: $colour-white;
   @include box-shadow;
-  overflow: hidden; 
+  overflow: hidden;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-name:appearance ;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode:forwards;
+      animation-delay:3s;
+      animation-delay: 2s;
+      animation-delay:4ms ;
+    }
+  }
+  
+  @keyframes appearance {
+   0% {
+     transform: scale(0);
+   }
+   
+  
+   100% {
+     transform: scale(1);
+   }
+  }
 }
 
 .menus-meal__notch {
-  height: 5.25rem;
-  width:4.8rem;
+  width: 4rem;
   top: 0rem;
-  right: -5.99rem;
+  right: -3rem;
+  margin: 0rem -1rem 0rem 1rem;
   align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: $colour-tertiaire;
   position: absolute;
   transition-duration: 0.5s;
-  
+
   & .fa-circle-check {
     display: flex;
     height: 5rem;
@@ -136,6 +146,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
+
     &:hover fa-circle-check {
       transform: rotate(360deg);
       transition-duration: 0.9s;
@@ -144,32 +155,42 @@
 }
 
 .menus-meal__names {
-  display: flex;
-  flex-direction: column;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   & h3,
   p {
+    margin: 0;
+    align-items: center;
+  }
+
+  & p {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin: 0;
-    align-items: center;
   }
 }
 
 .menus-meal__price {
+  display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
-  gap: 5rem;
+  top: 3rem;
+  right: 1rem;
   font-weight: 500;
+ position:absolute;
 }
 
 .menus-meal__dish {
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
 
   &__title {
     font-weight: 100;
     position: relative;
-    top: 1rem;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
@@ -188,7 +209,9 @@
 
 .menus-meal__desserts {
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
   padding-bottom: 3rem;
 
   &__title {
@@ -210,23 +233,14 @@
   }
 }
 
+
 .bloc__link {
   color: $colour-white;
 }
 
 /*desktop*/
 @media screen and (min-width:768px) {
-  body{
-    width:auto;
-  }
-}
-
-  @media screen and (min-width:992px) {
-    body{
-      width:auto;
-    }
   .menus-meal {
     flex-direction: row;
-    gap: 1.2rem;
   }
 }

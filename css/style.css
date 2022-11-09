@@ -12,6 +12,7 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
+  z-index: 1;
   width: auto;
 }
 
@@ -83,6 +84,7 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
+  z-index: 1;
   width: auto;
 }
 
@@ -176,9 +178,8 @@ main {
   display: flex;
 }
 .background__image img {
-  max-height: 100%;
+  max-height: 32rem;
   max-width: 100%;
-  height: 32rem;
   width: 100%;
   object-fit: cover;
 }
@@ -186,22 +187,22 @@ main {
 .menus {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1.3rem 5rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 3rem 3rem 0 0;
+  padding: 0rem 0rem 5rem;
   background: #f6f6f6;
   margin-top: -2rem;
-  align-items: center;
   position: relative;
 }
 .menus__btn {
-  height: 3.92rem;
   color: #fff;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(#ff7ad9, #9356DC);
-  padding: 0.75rem 1.8rem;
+  padding: 0.75rem 2.8rem;
   border: none;
   border-radius: 2rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -217,22 +218,19 @@ main {
 .menus-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0rem 2rem 0rem;
+  width: 98%;
+  padding: 1rem 2rem 0rem 5rem;
 }
 .menus-container .fa-heart {
-  top: 3rem;
   font-weight: 400;
   right: 2rem;
-  bottom: 3rem;
   font-size: 1.7rem;
   position: absolute;
 }
 .menus-container .fa-heart:hover {
   font-weight: 900;
-  background: -webkit-linear-gradient(#ff7ad9, #9356DC);
+  background: linear-gradient(#ff7ad9, #9356DC);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -245,26 +243,9 @@ main {
 
 .menus-meal__entries {
   flex-direction: column;
-  width: 100%;
-}
-.menus-meal__entries .entries1 {
-  animation-delay: 100ms;
-}
-.menus-meal__entries .entries2 {
-  animation-delay: 200ms;
-}
-.menus-meal__entries .entries3 {
-  animation-delay: 300ms;
-}
-@keyframes loading {
-  0% {
-    transform: translateY(30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
 }
 .menus-meal__entries__title {
   font-weight: 100;
@@ -288,12 +269,8 @@ main {
   animation: both;
   cursor: pointer;
 }
-.menus-meal__loading:hover fa-circle-check {
-  transform: rotate(360deg);
-  transition-duration: 0.9s;
-}
 .menus-meal__loading:hover .menus-meal__notch {
-  margin-right: 5rem;
+  margin-right: 3rem;
 }
 
 .menus-meal__choice {
@@ -306,12 +283,47 @@ main {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
+.menus-meal__choice:nth-child(1) {
+  animation-name: appearance;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-delay: 2s;
+  animation-delay: 4ms;
+}
+.menus-meal__choice:nth-child(2) {
+  animation-name: appearance;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-delay: 2s;
+  animation-delay: 4ms;
+}
+.menus-meal__choice:nth-child(3) {
+  animation-name: appearance;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-delay: 2s;
+  animation-delay: 4ms;
+}
+@keyframes appearance {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .menus-meal__notch {
-  height: 5.25rem;
-  width: 4.8rem;
+  width: 4rem;
   top: 0rem;
-  right: -5.99rem;
+  right: -3rem;
+  margin: 0rem -1rem 0rem 1rem;
   align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: #99E2D0;
@@ -327,34 +339,46 @@ main {
   justify-content: center;
   font-size: 1.6rem;
 }
+.menus-meal__notch .fa-circle-check:hover fa-circle-check {
+  transform: rotate(360deg);
+  transition-duration: 0.9s;
+}
 
 .menus-meal__names {
-  display: flex;
-  flex-direction: column;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menus-meal__names h3,
+.menus-meal__names p {
+  margin: 0;
+  align-items: center;
+}
 .menus-meal__names p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: 0;
-  align-items: center;
 }
 
 .menus-meal__price {
+  display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
-  gap: 5rem;
+  top: 3rem;
+  right: 1rem;
   font-weight: 500;
+  position: absolute;
 }
 
 .menus-meal__dish {
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
 }
 .menus-meal__dish__title {
   font-weight: 100;
   position: relative;
-  top: 1rem;
   text-transform: uppercase;
   padding-bottom: 0.5rem;
 }
@@ -371,7 +395,9 @@ main {
 
 .menus-meal__desserts {
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0rem 1rem;
   padding-bottom: 3rem;
 }
 .menus-meal__desserts__title {
@@ -397,17 +423,8 @@ main {
 
 /*desktop*/
 @media screen and (min-width: 768px) {
-  body {
-    width: auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  body {
-    width: auto;
-  }
   .menus-meal {
     flex-direction: row;
-    gap: 1.2rem;
   }
 }
 

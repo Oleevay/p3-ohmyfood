@@ -35,13 +35,12 @@
 }
 
 .loading-spinner {
-    height: 180px;
-    width: 180px;
+    height: 100px;
+    width: 100px;
     margin: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /*perspective: 23rem;*/
 }
 
 .loading-spinner .loading-animation {
@@ -272,6 +271,7 @@ li:hover {
     }
 
     & .fa-heart {
+        bottom: 3rem;
         @include icon;
     }
 }
