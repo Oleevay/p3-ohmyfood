@@ -3,40 +3,40 @@
 @import"./utils/_mixins";
 
 /*animation*/
-.loading{
-    display:flex;
+.loading {
+    display: flex;
     height: 100%;
     width: 100%;
     position: fixed;
     align-items: center;
     justify-content: center;
-    background-color:$colour-light-grey;
-    opacity:0.9 ;
+    background-color: rgb(245,237,255);
+    opacity: 0.9;
     z-index: 1;
-    animation: disappears 1.1s;
+    animation: disappears 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes disappears{
- 0%{
-   opacity: 1;
-   visibility: visible; 
- }
- 
- 50%{
-    opacity: 1;
-    visibility: visible; 
- }
+@keyframes disappears {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
 
- 100%{
-    opacity: 0;
-    visibility:hidden; 
- }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .loading-spinner {
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
     margin: auto;
     left: 50%;
     top: 50%;
@@ -48,7 +48,7 @@
     width: 180%;
     height: 180%;
     top: 0;
-    border-radius:50%;
+    border-radius: 50%;
 }
 
 .loading-spinner .loading-animation:nth-child(1) {
@@ -142,18 +142,48 @@
     }
 
     &__btn {
-        @include btn
+        @include btn;
     }
+
+  /*  &__animate {
+        position: absolute;
+        width: 16.75rem;
+        top: 16.5rem;
+        bottom: 60rem;
+        border-radius: 2rem;
+        border-top: thick double $colour-primary;
+        border-bottom: thick double $colour-secondary;
+        animation: 1s linear infinite alternate animate;
+    }
+
+    @keyframes animate {
+        from {
+            transform: rotate (0deg);
+             box-shadow: 0 0 0$colour-secondary;
+             box-shadow:  0 0 0 $colour-primary;
+             box-shadow:  0 0 0$colour-tertiaire ;
+             box-shadow:  0 $colour-blue;
+        }
+
+        to {
+            transform: rotate(4deg);
+            box-shadow: 0 - 0.625rem 0 $colour-secondary,
+                -0.625rem 0 0 $colour-primary,
+                0 0.625rem 0$colour-tertiaire ,
+                0.625rem$colour-blue;
+        }
+    }*/
+
 }
+
 
 .functioning {
     display: flex;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 3rem;
     flex-direction: column;
 
     & h2 {
         width: 98%;
-        margin-top: 0rem;
     }
 
     & ol {
@@ -162,10 +192,11 @@
         list-style: none;
         gap: 1.5rem;
         padding: 0.9rem;
+        margin:0;
     }
 
     & li {
-        background-color: $colour-grey;
+        background-color:$colour-light-grey;
         padding: 0.75rem 1.4rem;
         border-radius: 1rem;
         position: relative;
@@ -188,7 +219,7 @@
         & i {
             height: 2rem;
             color: #7e7e7e;
-            padding: 1rem 1.7rem 0rem;
+            padding: 1rem 1rem 0rem;
             left: 1rem;
         }
     }
@@ -197,7 +228,7 @@
 
 li:hover {
     cursor: pointer;
-    background-color: rgb(221, 198, 254);
+    background-color: rgb(245, 237, 255);
 
     & i {
         color: $colour-primary;
@@ -208,11 +239,10 @@ li:hover {
     display: flex;
     flex-direction: column;
     background: $colour-light-grey;
-    padding: 3.9rem 1.2rem 3rem;
+    padding: 2rem 1.5rem 3rem;
 
     & h2 {
-        padding-bottom: 0.8rem;
-        margin: 0;
+        padding-bottom: 0.4rem;
         width: 100%;
     }
 }
@@ -220,7 +250,7 @@ li:hover {
 .restaurants-link {
     display: flex;
     flex-direction: column;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.3rem;
     position: relative;
 
     &__tag {
@@ -253,10 +283,6 @@ li:hover {
     flex-direction: column;
     padding: 0.5rem 0.8rem;
 
-    &:hover {
-        font-weight: 400;
-    }
-
     & h3,
     p {
         margin: 0rem;
@@ -282,14 +308,14 @@ li:hover {
     flex-direction: column;
     justify-content: center;
     background: $colour-dark-grey;
-    padding: 1rem 1.4rem;
+    padding: 1rem 1.5rem;
 
     &__heading {
         font-weight: 500;
         color: $colour-white;
         font-family: "Shrikhand", cursive;
         margin: 0;
-        padding: 1rem 0rem;
+        padding: 1rem 0rem 1.5rem;
     }
 
     & a {
@@ -330,7 +356,7 @@ li:hover {
 
     li:hover {
         transform: scale(0.9);
-        background-color: rgb(226, 149, 240);
+        background-color: rgb(245,237,255);
     }
 }
 
