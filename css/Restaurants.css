@@ -12,7 +12,6 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  /*width: auto;*/
 }
 
 h1 {
@@ -82,7 +81,6 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  /*width: auto;*/
 }
 
 h1 {
@@ -161,6 +159,10 @@ main {
   padding: 0.3rem;
 }
 
+body {
+  min-width: 20rem;
+}
+
 .fa-arrow-left {
   display: flex;
   top: 1.4rem;
@@ -181,7 +183,6 @@ main {
 }
 
 .menus {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -191,37 +192,18 @@ main {
   margin-top: -4rem;
   position: relative;
 }
-.menus__btn {
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(#ff7ad9, #9356DC);
-  padding: 0.88rem 1.4rem;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 1.1s;
-}
-.menus__btn:hover {
-  /*transform: scale(1.1);*/
-  color: #0065fc;
-  opacity: 0.8;
-}
 
 .menus-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 1rem 2rem 0rem 5rem;
+  justify-content: space-between;
+  padding: 1rem 2rem 0rem;
 }
 .menus-container .fa-heart {
   font-weight: 400;
   right: 2rem;
   font-size: 1.7rem;
-  position: absolute;
+  position: relative;
 }
 .menus-container .fa-heart:hover {
   font-weight: 900;
@@ -260,39 +242,39 @@ main {
   background-color: #99E2D0;
 }
 
-.speciality__appearance {
-  animation: appearance 1s;
+.speciality__appearance- {
+  animation: appearance 2s;
   animation-fill-mode: both;
-  /*animation-iteration-count: 1;*/
+  animation-iteration-count: 1;
 }
-.speciality__appearance .appearance-1 {
+.speciality__appearance- .appearance-1 {
   animation-delay: 100ms;
 }
-.speciality__appearance .appearance-2 {
+.speciality__appearance- .appearance-2 {
   animation-delay: 200ms;
 }
-.speciality__appearance .appearance-3 {
+.speciality__appearance- .appearance-3 {
   animation-delay: 300ms;
 }
-.speciality__appearance .appearance-4 {
+.speciality__appearance- .appearance-4 {
   animation-delay: 400ms;
 }
-.speciality__appearance .appearance-5 {
+.speciality__appearance- .appearance-5 {
   animation-delay: 500ms;
 }
-.speciality__appearance .appearance-6 {
+.speciality__appearance- .appearance-6 {
   animation-delay: 600ms;
 }
-.speciality__appearance .appearance-7 {
+.speciality__appearance- .appearance-7 {
   animation-delay: 700ms;
 }
-.speciality__appearance .appearance-8 {
+.speciality__appearance- .appearance-8 {
   animation-delay: 800ms;
 }
-.speciality__appearance .appearance-9 {
+.speciality__appearance- .appearance-9 {
   animation-delay: 900ms;
 }
-.speciality__appearance .appearance-10 {
+.speciality__appearance- .appearance-10 {
   animation-delay: 1000ms;
 }
 @keyframes appearance {
@@ -323,17 +305,22 @@ main {
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  margin-right: 3rem;
+  margin-right: 3.4rem;
 }
 .speciality__choice:hover .fa-circle-check {
   transform: rotate(360deg);
   transition-duration: 0.9s;
 }
+.speciality__choice:hover .speciality__names {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 .speciality__notch {
   width: 4rem;
   top: 0rem;
-  right: -3rem;
+  right: -3.5rem;
   margin: 0rem -1rem 0rem 1rem;
   align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
@@ -384,15 +371,45 @@ main {
   padding-bottom: 3rem;
 }
 
+.commander {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.commander__btn {
+  display: flex;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#ff7ad9, #9356DC);
+  padding: 0.88rem 1.4rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 1.1s;
+}
+.commander__btn:hover {
+  color: #0065fc;
+  opacity: 0.8;
+}
+
 .bloc__link {
   color: #fff;
 }
 
 /*desktop*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+  body {
+    min-width: 74.44rem;
+  }
   .menus-meal {
     flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Restaurants.css.map */

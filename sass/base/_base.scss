@@ -11,8 +11,8 @@ body {
     box-sizing: border-box;
     background: $colour-white;
     font-family: "Roboto", sans-serif;
-    margin: 0;
-    /*width: auto;*/
+    margin: 0; 
+    max-width:auto;
 }
 
 
@@ -20,6 +20,7 @@ h1 {
     font-family: "Shrikhand", cursive;
     font-weight: 900;
     font-size: 1.75rem;
+    margin: 0;
 
 }
 
@@ -56,6 +57,5 @@ a :visited {
 }
 
 main {
-    width: auto;
     margin: auto;
 }
