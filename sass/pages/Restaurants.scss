@@ -4,6 +4,9 @@
 @import"../utils/mixins";
 @import"../utils/_variable";
 
+body {
+  width:20rem;
+}
 
 .fa-arrow-left {
   display: flex;
@@ -44,7 +47,7 @@
 .menus-container {
   display: flex;
   align-items: center;
-  width: 98%;
+  width: 100%;
   padding: 1rem 2rem 0rem 5rem;
 
   & .fa-heart {
@@ -82,27 +85,26 @@
   }
 }
 
-.speciality__appearanceentries {
+.speciality__appearance {
   animation: appearance 1s;
   animation-fill-mode: both;
-  animation-iteration-count: 1;
+  /*animation-iteration-count: 1;*/
 
-  @for $i from 1 through 3 {
-    .appearanceentries--#{$i} {
+  @for $i from 1 through 10 {
+    .appearance-#{$i} {
       animation-delay: 100ms *$i;
     }
   }
 
   @keyframes appearance {
     0% {
-      transform: scale(0);
+      opacity:0;
     }
 
     100% {
-      transform: scale(1);
+      opacity:1;
     }
   }
-
 }
 
 .speciality__choice {
@@ -115,10 +117,13 @@
   @include box-shadow;
   overflow: hidden;
 
-  &:hover .speciality__price{
-margin-right: -6rem;
+  &:hover .speciality__price {
+    transition: 300ms ease-in-out;
+    animation: both;
+    right: 5.5rem;
   }
-  &:hover .speciality__notch{
+
+  &:hover .speciality__notch {
     transition: 300ms ease-in-out;
     animation: both;
     cursor: pointer;
@@ -159,14 +164,11 @@ margin-right: -6rem;
 
   & h3,
   p {
-    margin: 0;
-    align-items: center;
-  }
-
-  & p {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: 0;
+    align-items: center;
   }
 }
 
@@ -182,28 +184,6 @@ margin-right: -6rem;
   max-width: 100%;
   padding: 0rem 1rem;
 }
-.speciality__appearancedish {
-  animation: appearance 2.9s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-
-  @for $i from 1 through 3 {
-    .appearancedish--#{$i} {
-      animation-delay: 500ms *$i;
-    }
-  }
-
-  @keyframes appearance {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-}
 
 .menu__desserts {
   flex-direction: column;
@@ -212,28 +192,6 @@ margin-right: -6rem;
   padding-bottom: 3rem;
 }
 
-.speciality__appearancedesserts {
-  animation: appearance 3.2s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-
-  @for $i from 1 through 3 {
-    .appearancedesserts--#{$i} {
-      animation-delay: 800ms *$i;
-    }
-  }
-
-  @keyframes appearance {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-}
 .bloc__link {
   color: $colour-white;
 }

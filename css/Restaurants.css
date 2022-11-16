@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;500;700 & family= Shrikhand & display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500 & display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;500;700 & family= Shrikhand & display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500 & display=swap");
 :root {
   margin: 0;
   box-sizing: border-box;
@@ -12,8 +12,7 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  z-index: 1;
-  width: auto;
+  /*width: auto;*/
 }
 
 h1 {
@@ -23,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -83,8 +82,7 @@ body {
   background: #fff;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  z-index: 1;
-  width: auto;
+  /*width: auto;*/
 }
 
 h1 {
@@ -94,7 +92,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -200,7 +198,7 @@ main {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(#ff7ad9, #9356DC);
-  padding: 0.88rem 2.8rem;
+  padding: 0.88rem 1.4rem;
   border: none;
   border-radius: 2rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -216,7 +214,7 @@ main {
 .menus-container {
   display: flex;
   align-items: center;
-  width: 98%;
+  width: 100%;
   padding: 1rem 2rem 0rem 5rem;
 }
 .menus-container .fa-heart {
@@ -262,26 +260,47 @@ main {
   background-color: #99E2D0;
 }
 
-.speciality__appearanceentries {
+.speciality__appearance {
   animation: appearance 1s;
   animation-fill-mode: both;
-  animation-iteration-count: 1;
+  /*animation-iteration-count: 1;*/
 }
-.speciality__appearanceentries .appearanceentries--1 {
+.speciality__appearance .appearance-1 {
   animation-delay: 100ms;
 }
-.speciality__appearanceentries .appearanceentries--2 {
+.speciality__appearance .appearance-2 {
   animation-delay: 200ms;
 }
-.speciality__appearanceentries .appearanceentries--3 {
+.speciality__appearance .appearance-3 {
   animation-delay: 300ms;
+}
+.speciality__appearance .appearance-4 {
+  animation-delay: 400ms;
+}
+.speciality__appearance .appearance-5 {
+  animation-delay: 500ms;
+}
+.speciality__appearance .appearance-6 {
+  animation-delay: 600ms;
+}
+.speciality__appearance .appearance-7 {
+  animation-delay: 700ms;
+}
+.speciality__appearance .appearance-8 {
+  animation-delay: 800ms;
+}
+.speciality__appearance .appearance-9 {
+  animation-delay: 900ms;
+}
+.speciality__appearance .appearance-10 {
+  animation-delay: 1000ms;
 }
 @keyframes appearance {
   0% {
-    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -296,7 +315,9 @@ main {
   overflow: hidden;
 }
 .speciality__choice:hover .speciality__price {
-  margin-right: -6rem;
+  transition: 300ms ease-in-out;
+  animation: both;
+  right: 5.5rem;
 }
 .speciality__choice:hover .speciality__notch {
   transition: 300ms ease-in-out;
@@ -336,13 +357,11 @@ main {
 }
 .speciality__names h3,
 .speciality__names p {
-  margin: 0;
-  align-items: center;
-}
-.speciality__names p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin: 0;
+  align-items: center;
 }
 
 .speciality__price {
@@ -358,57 +377,11 @@ main {
   padding: 0rem 1rem;
 }
 
-.speciality__appearancedish {
-  animation: appearance 2.9s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-}
-.speciality__appearancedish .appearancedish--1 {
-  animation-delay: 500ms;
-}
-.speciality__appearancedish .appearancedish--2 {
-  animation-delay: 1000ms;
-}
-.speciality__appearancedish .appearancedish--3 {
-  animation-delay: 1500ms;
-}
-@keyframes appearance {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .menu__desserts {
   flex-direction: column;
   max-width: 100%;
   padding: 0rem 1rem;
   padding-bottom: 3rem;
-}
-
-.speciality__appearancedesserts {
-  animation: appearance 3.2s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-}
-.speciality__appearancedesserts .appearancedesserts--1 {
-  animation-delay: 800ms;
-}
-.speciality__appearancedesserts .appearancedesserts--2 {
-  animation-delay: 1600ms;
-}
-.speciality__appearancedesserts .appearancedesserts--3 {
-  animation-delay: 2400ms;
-}
-@keyframes appearance {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 .bloc__link {
