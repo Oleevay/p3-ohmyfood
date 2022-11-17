@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
@@ -18,6 +18,7 @@ h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 900;
   font-size: 1.75rem;
+  margin: 0;
 }
 
 h2 {
@@ -76,7 +77,7 @@ main {
   box-sizing: border-box;
 }
 
-body {
+body, html {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
@@ -87,6 +88,7 @@ h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 900;
   font-size: 1.75rem;
+  margin: 0;
 }
 
 h2 {
@@ -197,13 +199,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 0rem;
+  padding: 3rem 2rem 0rem;
 }
 .menus-container .fa-heart {
   font-weight: 400;
   right: 2rem;
   font-size: 1.7rem;
-  position: relative;
+  position: absolute;
 }
 .menus-container .fa-heart:hover {
   font-weight: 900;
@@ -216,12 +218,12 @@ body {
 .menus-meal {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
 }
 
 .menu__entries {
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
   padding: 0rem 1rem;
 }
 
@@ -242,64 +244,65 @@ body {
   background-color: #99E2D0;
 }
 
-.speciality__appearance- {
+.speciality__appearance {
   animation: appearance 2s;
   animation-fill-mode: both;
-  animation-iteration-count: 1;
 }
-.speciality__appearance- .appearance-1 {
+.speciality__appearance:nth-child(1) {
   animation-delay: 100ms;
 }
-.speciality__appearance- .appearance-2 {
+.speciality__appearance:nth-child(2) {
   animation-delay: 200ms;
 }
-.speciality__appearance- .appearance-3 {
+.speciality__appearance:nth-child(3) {
   animation-delay: 300ms;
 }
-.speciality__appearance- .appearance-4 {
+.speciality__appearance:nth-child(4) {
   animation-delay: 400ms;
 }
-.speciality__appearance- .appearance-5 {
+.speciality__appearance:nth-child(5) {
   animation-delay: 500ms;
 }
-.speciality__appearance- .appearance-6 {
+.speciality__appearance:nth-child(6) {
   animation-delay: 600ms;
 }
-.speciality__appearance- .appearance-7 {
+.speciality__appearance:nth-child(7) {
   animation-delay: 700ms;
 }
-.speciality__appearance- .appearance-8 {
+.speciality__appearance:nth-child(8) {
   animation-delay: 800ms;
 }
-.speciality__appearance- .appearance-9 {
+.speciality__appearance:nth-child(9) {
   animation-delay: 900ms;
 }
-.speciality__appearance- .appearance-10 {
+.speciality__appearance:nth-child(10) {
   animation-delay: 1000ms;
 }
 @keyframes appearance {
   0% {
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 .speciality__choice {
   align-items: center;
-  padding: 1rem;
+  padding: 0rem 1rem 1rem;
+  background-color: #fff;
   margin: 1rem 0rem 1.3rem;
   border-radius: 1.3rem;
   position: relative;
-  background-color: #fff;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 .speciality__choice:hover .speciality__price {
   transition: 300ms ease-in-out;
   animation: both;
-  right: 5.5rem;
+  margin-right: 4rem;
 }
 .speciality__choice:hover .speciality__notch {
   transition: 300ms ease-in-out;
@@ -310,11 +313,6 @@ body {
 .speciality__choice:hover .fa-circle-check {
   transform: rotate(360deg);
   transition-duration: 0.9s;
-}
-.speciality__choice:hover .speciality__names {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .speciality__notch {
@@ -330,43 +328,45 @@ body {
 }
 .speciality__notch .fa-circle-check {
   display: flex;
-  height: 5rem;
+  height: 5.1rem;
   color: white;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .speciality__names {
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 .speciality__names h3,
 .speciality__names p {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   margin: 0;
   align-items: center;
 }
 
 .speciality__price {
-  top: 3rem;
-  right: 1rem;
+  display: flex;
+  top: 2.8rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
   font-weight: 500;
-  position: absolute;
+  position: relative;
 }
 
 .menu__dish {
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
   padding: 0rem 1rem;
 }
 
 .menu__desserts {
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
   padding: 0rem 1rem;
   padding-bottom: 3rem;
 }
@@ -402,13 +402,9 @@ body {
 
 /*desktop*/
 @media screen and (min-width: 1024px) {
-  body {
-    min-width: 74.44rem;
-  }
   .menus-meal {
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
   }
 }
 
