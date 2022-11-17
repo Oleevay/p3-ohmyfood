@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
-body, html {
+body {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
+  width: auto;
   margin: 0;
 }
 

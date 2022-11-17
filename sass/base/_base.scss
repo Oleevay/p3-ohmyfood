@@ -7,10 +7,11 @@
     box-sizing: border-box;
 }
 
-body, html {
+body{
     box-sizing: border-box;
     background: $colour-white;
     font-family: "Roboto", sans-serif;
+    width: auto;
     margin: 0;
 }
 

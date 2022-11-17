@@ -7,10 +7,11 @@
   box-sizing: border-box;
 }
 
-body, html {
+body {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
+  width: auto;
   margin: 0;
 }
 
@@ -77,10 +78,11 @@ main {
   box-sizing: border-box;
 }
 
-body, html {
+body {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
+  width: auto;
   margin: 0;
 }
 
@@ -189,7 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 3rem 3rem 0 0;
-  padding: 0rem 0rem 5rem;
+  padding: 0rem 1rem 5rem;
   background: #f6f6f6;
   margin-top: -4rem;
   position: relative;
@@ -218,13 +220,12 @@ body {
 .menus-meal {
   display: flex;
   flex-direction: column;
-  width: auto;
 }
 
 .menu__entries {
   flex-direction: column;
   width: 100%;
-  padding: 0rem 1rem;
+  padding-right: 1rem;
 }
 
 .menu__title {
@@ -361,13 +362,12 @@ body {
 .menu__dish {
   flex-direction: column;
   width: 100%;
-  padding: 0rem 1rem;
+  padding-right: 1rem;
 }
 
 .menu__desserts {
   flex-direction: column;
   width: 100%;
-  padding: 0rem 1rem;
   padding-bottom: 3rem;
 }
 
@@ -404,7 +404,6 @@ body {
 @media screen and (min-width: 1024px) {
   .menus-meal {
     flex-direction: row;
-    justify-content: center;
   }
 }
 
