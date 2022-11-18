@@ -6,7 +6,7 @@
     padding: 0rem 0.3rem;
 }
 
-@mixin btn{
+@mixin btn {
     color: $colour-white;
     font-weight: 500;
     font-size: 1rem;
@@ -18,7 +18,7 @@
     border: none;
     border-radius: 2rem;
     @include box-shadow;
-    cursor: pointer;    
+    cursor: pointer;
     transition: all 1.1s;
 
     &:hover {
@@ -27,13 +27,17 @@
     }
 }
 
-@mixin icon {
-    font-weight: 400;
+@mixin btnheart{
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
     right: 2rem;
     font-size: 1.7rem;
+    background-color: transparent;
+    border: none;
     position: absolute;
-
-    &:hover {
+    &:hover{
         font-weight: 900;
         background: linear-gradient($colour-secondary, $colour-primary);
         -webkit-background-clip: text;

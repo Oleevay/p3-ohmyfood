@@ -264,12 +264,15 @@
             font-weight: 300;
         }
 
-        & .fa-heart {
-            bottom: 3rem;
-            @include icon;
+        &__btnheart{
+            @include btnheart;
         }
-    }
-
+    
+   & .fa-heart{
+    font-weight:lighter;
+   }
+}
+    
     /* footer*/
     .bloc {
         display: flex;

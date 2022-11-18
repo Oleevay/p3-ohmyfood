@@ -201,20 +201,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 2rem 0rem;
+  padding: 3rem 1rem 0rem;
 }
-.menus-container .fa-heart {
-  font-weight: 400;
+.menus-container__btnheart {
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
   right: 2rem;
   font-size: 1.7rem;
+  background-color: transparent;
+  border: none;
   position: absolute;
 }
-.menus-container .fa-heart:hover {
+.menus-container__btnheart:hover {
   font-weight: 900;
   background: linear-gradient(#ff7ad9, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.menus-container .fa-heart {
+  font-weight: lighter;
 }
 
 .menus-meal {

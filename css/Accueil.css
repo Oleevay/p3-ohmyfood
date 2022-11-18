@@ -308,19 +308,26 @@ li:hover i {
 .restaurants-description p {
   font-weight: 300;
 }
-.restaurants-description .fa-heart {
-  bottom: 3rem;
-  font-weight: 400;
+.restaurants-description__btnheart {
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
   right: 2rem;
   font-size: 1.7rem;
+  background-color: transparent;
+  border: none;
   position: absolute;
 }
-.restaurants-description .fa-heart:hover {
+.restaurants-description__btnheart:hover {
   font-weight: 900;
   background: linear-gradient(#ff7ad9, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.restaurants-description .fa-heart {
+  font-weight: lighter;
 }
 
 /* footer*/
