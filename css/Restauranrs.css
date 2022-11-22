@@ -353,10 +353,8 @@ body {
 
 .speciality__price {
   display: flex;
-  /*justify-content: flex-end;
-   align-items: flex-end;*/
-  /*padding-left:0.5rem ;*/
   font-weight: 500;
+  padding: 0rem 1rem;
 }
 
 .menu__dish {

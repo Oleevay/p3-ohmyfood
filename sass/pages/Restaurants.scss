@@ -48,10 +48,10 @@ body {
   &__btnheart {
     @include btnheart;
   }
-  
-  & .fa-heart{
-    font-weight:lighter;
-   }
+
+  & .fa-heart {
+    font-weight: lighter;
+  }
 }
 
 .menus-meal {
@@ -61,8 +61,8 @@ body {
 
 .menu__entries {
   flex-direction: column;
-  width: 100%;
-  padding-right:1rem;
+  width:100%;
+  padding-right: 1rem;
 }
 
 .menu__title {
@@ -83,9 +83,10 @@ body {
   }
 }
 
-.speciality__appearance{
+.speciality__appearance {
   animation: appearance 2s;
   animation-fill-mode: both;
+
   @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
       animation-delay: 100ms *$i;
@@ -94,12 +95,12 @@ body {
 
   @keyframes appearance {
     0% {
-      transform:translateY(50%) ;
+      transform: translateY(50%);
       opacity: 0;
     }
 
     100% {
-      transform:translateY(0) ;
+      transform: translateY(0);
       opacity: 1;
     }
   }
@@ -109,19 +110,19 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
- background-color: $colour-white;
- margin: 1rem 0rem 1.3rem;
- border-radius: 1.3rem;
- @include box-shadow;
- overflow: hidden;
- 
- &:hover .speciality__notch {
-   transition: 300ms ease-in-out;
+  background-color: $colour-white;
+  margin: 1rem 0rem 1.3rem;
+  border-radius: 1.3rem;
+  @include box-shadow;
+  overflow: hidden;
+
+  &:hover .speciality__notch {
+    transition: 300ms ease-in-out;
    animation: both;
-   cursor: pointer;
-   width:6rem;
+    cursor: pointer;
+    width: 6rem;
   }
-  
+
   &:hover .fa-circle-check {
     transform: rotate(360deg);
     transition-duration: 0.9s;
@@ -130,12 +131,10 @@ body {
 
 .speciality__notch {
   width: 0rem;
-  right: -3.5rem;
-  align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: $colour-tertiaire;
   transition-duration: 0.5s;
-  
+
   & .fa-circle-check {
     display: flex;
     height: 5.1rem;
@@ -147,8 +146,8 @@ body {
 }
 
 .speciality__names {
-  width:92% ;
-  padding: 0rem 1rem;
+  width: 95%;
+  padding-left: 1rem ;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -165,21 +164,19 @@ body {
 
 .speciality__price {
   display: flex;
- /*justify-content: flex-end;
-  align-items: flex-end;*/
-  /*padding-left:0.5rem ;*/
+  margin: 1.3rem 1rem 0rem 0rem;
   font-weight: 500;
 }
 
 .menu__dish {
   flex-direction: column;
-  width:100%;
-  padding-right:1rem;
+  width: 100%;
+  padding-right: 1rem;
 }
 
 .menu__desserts {
   flex-direction: column;
-  width:100%;
+  width: 100%;
   padding-bottom: 3rem;
 }
 

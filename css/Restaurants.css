@@ -300,7 +300,7 @@ body {
 
 .speciality__choice {
   display: flex;
-  width: 92%;
+  width: 100%;
   align-items: center;
   background-color: #fff;
   margin: 1rem 0rem 1.3rem;
@@ -312,7 +312,7 @@ body {
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  width: 4rem;
+  width: 6rem;
 }
 .speciality__choice:hover .fa-circle-check {
   transform: rotate(360deg);
@@ -321,9 +321,6 @@ body {
 
 .speciality__notch {
   width: 0rem;
-  top: 0rem;
-  right: -3.5rem;
-  align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: #99E2D0;
   transition-duration: 0.5s;
@@ -338,8 +335,8 @@ body {
 }
 
 .speciality__names {
-  width: 92%;
-  padding: 0rem 1rem;
+  width: 95%;
+  padding-left: 1rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -354,9 +351,7 @@ body {
 
 .speciality__price {
   display: flex;
-  /*justify-content: flex-end;
-   align-items: flex-end;*/
-  /*padding-left:0.5rem ;*/
+  margin: 1.3rem 1rem 0rem 0rem;
   font-weight: 500;
 }
 
