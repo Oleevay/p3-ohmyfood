@@ -106,28 +106,22 @@ body {
 }
 
 .speciality__choice {
+  display: flex;
+  width: 100%;
   align-items: center;
-  padding: 0rem 1rem 1rem;
-  background-color: $colour-white;
-  margin: 1rem 0rem 1.3rem;
-  border-radius: 1.3rem;
-  position: relative;
-  @include box-shadow;
-  overflow: hidden;
-
-  &:hover .speciality__price {
-    transition: 300ms ease-in-out;
-    animation: both;
-    margin-right: 4rem;
+ background-color: $colour-white;
+ margin: 1rem 0rem 1.3rem;
+ border-radius: 1.3rem;
+ @include box-shadow;
+ overflow: hidden;
+ 
+ &:hover .speciality__notch {
+   transition: 300ms ease-in-out;
+   animation: both;
+   cursor: pointer;
+   width:6rem;
   }
-
-  &:hover .speciality__notch {
-    transition: 300ms ease-in-out;
-    animation: both;
-    cursor: pointer;
-    margin-right: 3.4rem;
-  }
-
+  
   &:hover .fa-circle-check {
     transform: rotate(360deg);
     transition-duration: 0.9s;
@@ -135,16 +129,13 @@ body {
 }
 
 .speciality__notch {
-  width: 4rem;
-  top: 0rem;
+  width: 0rem;
   right: -3.5rem;
-  margin: 0rem -1rem 0rem 1rem;
   align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
   background: $colour-tertiaire;
-  position: absolute;
   transition-duration: 0.5s;
-
+  
   & .fa-circle-check {
     display: flex;
     height: 5.1rem;
@@ -156,6 +147,8 @@ body {
 }
 
 .speciality__names {
+  width:92% ;
+  padding: 0rem 1rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -172,12 +165,10 @@ body {
 
 .speciality__price {
   display: flex;
-  top: 2.8rem;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-left:0.5rem ;
+ /*justify-content: flex-end;
+  align-items: flex-end;*/
+  /*padding-left:0.5rem ;*/
   font-weight: 500;
-  position: relative;
 }
 
 .menu__dish {

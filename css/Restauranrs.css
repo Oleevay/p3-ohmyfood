@@ -300,7 +300,7 @@ body {
 
 .speciality__choice {
   display: flex;
-  width: 92%;
+  width: 100%;
   align-items: center;
   background-color: #fff;
   margin: 1rem 0rem 1.3rem;
@@ -312,7 +312,7 @@ body {
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  width: 4rem;
+  width: 6rem;
 }
 .speciality__choice:hover .fa-circle-check {
   transform: rotate(360deg);
@@ -321,7 +321,6 @@ body {
 
 .speciality__notch {
   width: 0rem;
-  top: 0rem;
   right: -3.5rem;
   align-items: center;
   border-radius: 0 1.3rem 1.3rem 0;
@@ -408,4 +407,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=Restaurants.css.map */
+/*# sourceMappingURL=Restauranrs.css.map */
