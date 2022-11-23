@@ -120,7 +120,7 @@ body {
     transition: 300ms ease-in-out;
    animation: both;
     cursor: pointer;
-    width: 6rem;
+    width: 7rem;
   }
 
   &:hover .fa-circle-check {
@@ -131,6 +131,7 @@ body {
 
 .speciality__notch {
   width: 0rem;
+  margin-right: -1rem;
   border-radius: 0 1.3rem 1.3rem 0;
   background: $colour-tertiaire;
   transition-duration: 0.5s;

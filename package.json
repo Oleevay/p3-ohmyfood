@@ -1,13 +1,19 @@
 {
   "name":"p3-ohmyfood",
   "version":"1.0.0",
-  "description":"",
+  "description":" Mon projet 3 Developper web chez OpenClassrooms, l'objectif est de dynamiser une pages web avec des animations en css en utilisant sass",
   "main":"index.js",
   "scripts":{
-    "sass":"sass --watch mobile.scss:./css/mobile.css"
+    "sass":"sass --watch ./sass/accueil.scss ./css/accueil.css"
   },
+  
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/Oleevay/p3-ohmyfood.git/"
+  },
+  
   "author":"",
-  "license":"",
+  "license":"ISC",
   "dependencies": {
     "sass": "^1.55.0"
   }

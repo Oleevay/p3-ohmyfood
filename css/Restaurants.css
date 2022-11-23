@@ -312,7 +312,7 @@ body {
   transition: 300ms ease-in-out;
   animation: both;
   cursor: pointer;
-  width: 6rem;
+  width: 7rem;
 }
 .speciality__choice:hover .fa-circle-check {
   transform: rotate(360deg);
@@ -321,6 +321,7 @@ body {
 
 .speciality__notch {
   width: 0rem;
+  margin-right: -1rem;
   border-radius: 0 1.3rem 1.3rem 0;
   background: #99E2D0;
   transition-duration: 0.5s;

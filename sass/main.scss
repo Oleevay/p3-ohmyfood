@@ -4,17 +4,13 @@
 @import "./base/base";
 @import "./base/typography";
 
-@import "./components/button";
+@import "./components/_button";
 
-@import "./layout/header";
-@import "./layout/search-city";
-@import "./layout/exploration";
-@import "./layout/functioning";
-@import"./layout/_restaurants";
+@import "./layout/_header";
 @import"./layout/_bloc";
 
 @import"./mobile.scss";
-@import "./pages/restaurant1.scss";
+@import "./pages/restaurant.scss";
 
 
 
