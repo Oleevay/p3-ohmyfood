@@ -4,9 +4,6 @@
 @import"../utils/mixins";
 @import"../utils/_variable";
 
-body {
-  min-width: 20rem;
-}
 
 .fa-arrow-left {
   display: flex;
@@ -33,7 +30,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 3rem 3rem 0 0;
-  padding: 0rem 1rem 5rem;
   background: $colour-light-grey;
   margin-top: -4rem;
   position: relative;
@@ -43,7 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 1rem 0rem;
+  padding: 3rem 2rem 0rem;
 
   &__btnheart {
     @include btnheart;
@@ -57,28 +53,29 @@ body {
 .menus-meal {
   display: flex;
   flex-direction: column;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .menu__entries {
+  display: flex;
   flex-direction: column;
-  width:100%;
-  padding-right: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.25rem 0;
 }
 
 .menu__title {
   font-weight: 100;
-  position: relative;
   text-transform: uppercase;
-  padding-bottom: 0.5rem;
 
   &:after {
     content: "";
+    display: block;
     width: 3.5rem;
     height: 0.25rem;
-    bottom: -1.2rem;
-    margin: 1rem 0;
-    left: 0;
-    position: absolute;
+    margin-bottom: 0.313rem;
+    margin-top: 0.313rem;
     background-color: $colour-tertiaire;
   }
 }
@@ -108,54 +105,39 @@ body {
 
 .speciality__choice {
   display: flex;
+  justify-content: space-between;
+  max-width: 37.5rem;
   width: 100%;
-  align-items: center;
+ /* align-items: center;*/
   background-color: $colour-white;
-  margin: 1rem 0rem 1.3rem;
+  margin-top: 0.75rem;
   border-radius: 1.3rem;
   @include box-shadow;
   overflow: hidden;
-
-  &:hover .speciality__notch {
+  
+  &:hover .notch {
     transition: 300ms ease-in-out;
-   animation: both;
+    animation: both;
     cursor: pointer;
-    width: 7rem;
+    /*width: 7rem;*/
   }
-
   &:hover .fa-circle-check {
     transform: rotate(360deg);
     transition-duration: 0.9s;
   }
 }
 
-.speciality__notch {
-  width: 0rem;
-  margin-right: -1rem;
-  border-radius: 0 1.3rem 1.3rem 0;
-  background: $colour-tertiaire;
-  transition-duration: 0.5s;
-
-  & .fa-circle-check {
-    display: flex;
-    height: 5.1rem;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-  }
-}
 
 .speciality__names {
-  width: 95%;
-  padding-left: 1rem ;
+  align-self: center;
+  padding: 0.413rem 0.938rem ;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-
+  
   h3,
   p {
-
+    
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: 0;
@@ -165,9 +147,35 @@ body {
 
 .speciality__price {
   display: flex;
-  margin: 1.3rem 1rem 0rem 0rem;
-  font-weight: 500;
+  gap:0.938rem;
+  align-items: center;
+  transition: all 500ms;
+  
+  & p{
+    align-items: center;
+    padding-top:1.25rem ;
+    padding-right: 0.313rem;
+    font-weight: 500;
+    margin:0;
+  }
 }
+.notch {
+  display: flex;
+  /* width: 0rem;*/
+  height:4.75rem;
+  padding: 0 1.25rem;
+  align-items: center;
+  margin-right: -4.063rem;
+  border-radius: 0 1.3rem 1.3rem 0;
+  background: $colour-tertiaire;
+  transition-duration: 0.5s;
+  
+  & .fa-circle-check {
+    color: white;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  }
 
 .menu__dish {
   flex-direction: column;
@@ -196,9 +204,19 @@ body {
   color: $colour-white;
 }
 
+/*tablette*/
+/*@media screen and (min-width:768px) {
+    .menus-meal{
+    padding-left:4% ;  
+    padding-right: 4%;
+    }
+
+}*/
+
+
+
 /*desktop*/
 @media screen and (min-width:1024px) {
-
   .menus-meal {
     flex-direction: row;
   }
