@@ -11,9 +11,7 @@ body {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
-  height: 100%;
   min-width: 320px;
-  max-width: 1680px;
   margin: 0;
 }
 
@@ -25,7 +23,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
@@ -40,7 +38,7 @@ li {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -84,9 +82,7 @@ body {
   box-sizing: border-box;
   background: #fff;
   font-family: "Roboto", sans-serif;
-  height: 100%;
   min-width: 320px;
-  max-width: 1680px;
   margin: 0;
 }
 
@@ -98,7 +94,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
@@ -113,7 +109,7 @@ li {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -187,8 +183,6 @@ main {
 }
 
 .menus {
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   border-radius: 3rem 3rem 0 0;
   background: #f6f6f6;
@@ -232,24 +226,25 @@ main {
 }
 
 .menu__entries {
-  display: flex;
   flex-direction: column;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1.25rem 0;
+  padding: 1.15rem 0;
 }
 
 .menu__title {
   font-weight: 100;
   text-transform: uppercase;
+  position: relative;
 }
 .menu__title:after {
   content: "";
-  display: block;
   width: 3.5rem;
   height: 0.25rem;
-  margin-bottom: 0.313rem;
-  margin-top: 0.313rem;
+  top: 1.813rem;
+  left: 0;
+  position: absolute;
   background-color: #99E2D0;
 }
 
@@ -298,25 +293,25 @@ main {
   }
 }
 
-.speciality__choice {
+.speciality {
   display: flex;
   justify-content: space-between;
-  max-width: 37.5rem;
   width: 100%;
-  /* align-items: center;*/
+  align-items: center;
+  margin: 0.413rem 0.938rem;
   background-color: #fff;
   margin-top: 0.75rem;
   border-radius: 1.3rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-.speciality__choice:hover .notch {
-  transition: 300ms ease-in-out;
+.speciality:hover .notch {
+  transition: 300ms;
   animation: both;
   cursor: pointer;
-  /*width: 7rem;*/
+  margin-right: 0rem;
 }
-.speciality__choice:hover .fa-circle-check {
+.speciality:hover .fa-circle-check {
   transform: rotate(360deg);
   transition-duration: 0.9s;
 }
@@ -325,11 +320,10 @@ main {
   align-self: center;
   padding: 0.413rem 0.938rem;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .speciality__names h3,
 .speciality__names p {
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
@@ -339,50 +333,51 @@ main {
 .speciality__price {
   display: flex;
   gap: 0.938rem;
+}
+.speciality__price .notch {
+  display: flex;
+  background: #99E2D0;
+  padding: 0 1.25rem;
+  height: 4.375rem;
   align-items: center;
-  transition: all 500ms;
+  margin-right: -4.063rem;
+  border-radius: 0 1.3rem 1.3rem 0;
+  transition-duration: 0.9s;
+}
+.speciality__price .fa-circle-check {
+  color: white;
+  align-items: center;
+  font-size: 1.5rem;
 }
 .speciality__price p {
   align-items: center;
-  padding-top: 1.25rem;
+  padding-top: 2.3rem;
   padding-right: 0.313rem;
   font-weight: 500;
   margin: 0;
 }
 
-.notch {
-  display: flex;
-  /* width: 0rem;*/
-  height: 4.75rem;
-  padding: 0 1.25rem;
-  align-items: center;
-  margin-right: -4.063rem;
-  border-radius: 0 1.3rem 1.3rem 0;
-  background: #99E2D0;
-  transition-duration: 0.5s;
-}
-.notch .fa-circle-check {
-  color: white;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
 .menu__dish {
   flex-direction: column;
-  width: 100%;
-  padding-right: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.15rem 0;
 }
 
 .menu__desserts {
   flex-direction: column;
-  width: 100%;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.15rem 0;
 }
 
 .commander {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1.875rem;
 }
 .commander__btn {
   display: flex;
@@ -408,18 +403,24 @@ main {
   color: #fff;
 }
 
-/*tablette*/
-/*@media screen and (min-width:768px) {
-    .menus-meal{
-    padding-left:4% ;  
-    padding-right: 4%;
-    }
-
-}*/
 /*desktop*/
 @media screen and (min-width: 1024px) {
+  .menus {
+    max-width: 1380px;
+    margin: 0;
+  }
   .menus-meal {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu__entries {
+    width: 30%;
+  }
+  .menu__dish {
+    width: 30%;
+  }
+  .menu__desserts {
+    width: 30%;
   }
 }
 
