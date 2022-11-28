@@ -377,7 +377,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1.875rem;
+  padding: 2.875rem 0 6rem;
 }
 .commander__btn {
   display: flex;
@@ -406,8 +406,9 @@ main {
 /*desktop*/
 @media screen and (min-width: 1024px) {
   .menus {
-    max-width: 1380px;
-    margin: 0;
+    max-width: auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
   .menus-meal {
     flex-direction: row;

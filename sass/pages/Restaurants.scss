@@ -107,7 +107,7 @@
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin :0.413rem 0.938rem;
+  margin: 0.413rem 0.938rem;
   background-color: $colour-white;
   margin-top: 0.75rem;
   border-radius: 1.3rem;
@@ -192,7 +192,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1.875rem;
+  padding: 2.875rem 0 6rem;
 
   &__btn {
     display: flex;
@@ -207,11 +207,12 @@
 
 /*desktop*/
 @media screen and (min-width:1024px) {
-  .menus{
-  
-    max-width: 1380px;
-    margin:0;
+  .menus {
+    max-width: auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
+
   .menus-meal {
     flex-direction: row;
     justify-content: space-between;
