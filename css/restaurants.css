@@ -229,7 +229,6 @@ main {
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 1.15rem 0;
 }
 
@@ -361,7 +360,6 @@ main {
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 1.15rem 0;
 }
 
@@ -369,7 +367,6 @@ main {
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 1.15rem 0;
 }
 
