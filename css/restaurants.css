@@ -830,6 +830,7 @@ main {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 500ms;
 }
 .menus-container .fa-heart {
   font-weight: lighter;
