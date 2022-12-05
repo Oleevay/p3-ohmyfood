@@ -41,12 +41,12 @@
     background-color: transparent;
     border: none;
     position: absolute;
-     &:hover {
-         font-weight: 900;
-         background: linear-gradient($colour-secondary, $colour-primary);
-         -webkit-background-clip: text;
-         background-clip: text;
-         -webkit-text-fill-color: transparent;
-     }   
+
+    &:hover {
+        font-weight: 900;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
-   
