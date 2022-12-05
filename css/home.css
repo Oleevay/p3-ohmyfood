@@ -636,6 +636,7 @@ li:hover i {
   -webkit-text-fill-color: transparent;
   transition: all 500ms;
   transform: scale(1.2);
+  cursor: pointer;
 }
 .restaurants-description .fa-heart {
   font-weight: lighter;
