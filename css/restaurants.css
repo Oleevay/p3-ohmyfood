@@ -831,6 +831,8 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 500ms;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .menus-container .fa-heart {
   font-weight: lighter;
